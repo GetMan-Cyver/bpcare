@@ -6,7 +6,7 @@ import { calculateDosage } from '../utils/calculator';
 import { BRUTE_FORCE_CONFIG, escapeHTML, getSecurityState, saveSecurityState, resetSecurityState } from '../utils/security';
 
 // Konfigurasi WhatsApp Admin Toko BPCareU
-const ADMIN_WA_NUMBER = '6281288889999';
+const ADMIN_WA_NUMBER = '6282155566107';
 
 // State Runtime
 let runtimeProducts: Product[] = [...INITIAL_PRODUCTS];
