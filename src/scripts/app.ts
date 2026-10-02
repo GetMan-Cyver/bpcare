@@ -16,7 +16,7 @@ let currentFilter = 'all';
 
 // State Admin & Database
 let GOOGLE_APPS_SCRIPT_URL = '';
-let ADMIN_API_KEY = 'PROPOLIS_SECRET_ADMIN_KEY_2026';
+let ADMIN_API_KEY = 'bp2026';
 let lastPasswordUpdate = '2026-09-01 10:00:00';
 let isAdminAuthenticated = false;
 let pendingDeleteProductId: string | null = null;
