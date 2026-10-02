@@ -1,0 +1,100 @@
+---
+// ProductFormModal.astro - Formulir Tambah / Edit Produk Katalog
+---
+<div id="productFormModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 hidden opacity-0 transition-opacity duration-200">
+  <div class="bg-white rounded-3xl w-full max-w-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+    
+    <div class="p-4 sm:p-5 bg-gradient-to-r from-bpRed-800 to-red-700 text-white flex justify-between items-center shrink-0">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-pen-to-square text-amber-300"></i>
+        <h3 id="productFormTitle" class="font-black text-sm sm:text-base">Tambah Produk Baru</h3>
+      </div>
+      <button id="closeProductFormBtn" class="w-8 h-8 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white cursor-pointer">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+    </div>
+
+    <form id="productCrudForm" class="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs">
+      <input type="hidden" id="formMode" value="create" />
+      <input type="hidden" id="formOriginalId" value="" />
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="space-y-1">
+          <label for="formProdId" class="font-bold text-slate-700">ID Unik Produk (Slug) <span class="text-red-500">*</span></label>
+          <input type="text" id="formProdId" required placeholder="Contoh: bp-reguler" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono" />
+        </div>
+        <div class="space-y-1">
+          <label for="formProdCategory" class="font-bold text-slate-700">Kategori <span class="text-red-500">*</span></label>
+          <select id="formProdCategory" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+            <option value="propolis">Propolis</option>
+            <option value="stevia">Stevia</option>
+            <option value="specialty">Brassic & Norway (Specialty)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="space-y-1">
+        <label for="formProdName" class="font-bold text-slate-700">Nama Lengkap Produk <span class="text-red-500">*</span></label>
+        <input type="text" id="formProdName" required placeholder="Contoh: British Propolis Regular (Dewasa)" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-semibold" />
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-3">
+        <div class="space-y-1">
+          <label for="formProdPrice" class="font-bold text-slate-700">Harga Resmi (Rp) <span class="text-red-500">*</span></label>
+          <input type="number" id="formProdPrice" required placeholder="265000" min="1000" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600" />
+        </div>
+        <div class="space-y-1">
+          <label for="formProdVolume" class="font-bold text-slate-700">Volume / Isi <span class="text-red-500">*</span></label>
+          <input type="text" id="formProdVolume" required placeholder="6 ml (±120 tetes)" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600" />
+        </div>
+        <div class="space-y-1">
+          <label for="formProdBpom" class="font-bold text-slate-700">Nomor BPOM RI <span class="text-red-500">*</span></label>
+          <input type="text" id="formProdBpom" required placeholder="POM TR 183610771" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono" />
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="space-y-1">
+          <label for="formProdBadge" class="font-bold text-slate-700">Badge / Tag Promo</label>
+          <input type="text" id="formProdBadge" placeholder="Best Seller / Favorit" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600" />
+        </div>
+        <div class="space-y-1">
+          <label for="formProdStatus" class="font-bold text-slate-700">Status Produk</label>
+          <select id="formProdStatus" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+            <option value="active">Active (Tampil di Landing Page)</option>
+            <option value="archived">Archived (Disembunyikan)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="space-y-1">
+        <label for="formProdImage" class="font-bold text-slate-700">URL Foto Produk</label>
+        <input type="url" id="formProdImage" placeholder="https://..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600" />
+        <span class="text-[10px] text-slate-400">Gunakan tautan gambar publik online atau biarkan kosong untuk fallback bawaan.</span>
+      </div>
+
+      <div class="space-y-1">
+        <label for="formProdShortDesc" class="font-bold text-slate-700">Deskripsi Singkat (Kartu Katalog)</label>
+        <textarea id="formProdShortDesc" rows="2" placeholder="Deskripsi ringkas yang tampil pada kartu katalog..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600"></textarea>
+      </div>
+
+      <div class="space-y-1">
+        <label for="formProdDesc" class="font-bold text-slate-700">Deskripsi Lengkap (Modal Detail)</label>
+        <textarea id="formProdDesc" rows="3" placeholder="Uraian manfaat dan keunggulan lengkap..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600"></textarea>
+      </div>
+
+      <div class="space-y-1">
+        <label for="formProdUsage" class="font-bold text-slate-700">Aturan Pakai</label>
+        <textarea id="formProdUsage" rows="2" placeholder="Petunjuk dosis & cara konsumsi..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600"></textarea>
+      </div>
+
+      <div class="pt-3 border-t border-slate-200 flex justify-end gap-2 shrink-0">
+        <button type="button" id="cancelProductFormBtn" class="px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-bold hover:bg-slate-100 cursor-pointer">Batal</button>
+        <button type="submit" id="saveProductBtn" class="px-6 py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-bold shadow-md transition-all flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Simpan ke Database
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

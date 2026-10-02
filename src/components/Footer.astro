@@ -1,0 +1,56 @@
+---
+// Footer.astro - Footer Informasi & Layanan Pelanggan
+---
+<footer class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <div class="space-y-4 md:col-span-2">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-bpRed-700 flex items-center justify-center font-black text-amber-300 text-lg">BP</div>
+          <span class="font-black text-xl tracking-tight text-white">BPCare<span class="text-bpRed-600">U</span></span>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+          Distributor resmi produk kesehatan alami BP Group. Menghadirkan British Propolis, Steffi Stevia, Brassic Eye, Brassic Pro, dan BP Norway untuk perlindungan imunitas keluarga Anda.
+        </p>
+        <div class="flex items-center gap-3 pt-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800 text-[11px] font-bold">
+            <i class="fa-solid fa-shield-halved"></i> 100% Produk Original BPOM
+          </span>
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-white font-bold text-sm">Navigasi Halaman</p>
+        <ul class="space-y-1.5 text-xs text-slate-400">
+          <li><a href="#katalog" class="hover:text-amber-400 transition-colors">Katalog Produk Satuan</a></li>
+          <li><a href="#paket-harga" class="hover:text-amber-400 transition-colors">Daftar Paket Kemitraan</a></li>
+          <li><a href="#kalkulator" class="hover:text-amber-400 transition-colors">Kalkulator Dosis Propolis</a></li>
+          <li><a href="#legalitas" class="hover:text-amber-400 transition-colors">Legalitas Izin BPOM</a></li>
+          <li><button id="footerAdminBtn" class="text-left hover:text-amber-400 text-amber-400 font-bold transition-colors cursor-pointer"><i class="fa-solid fa-lock text-[10px] mr-1"></i> Portal Admin Database</button></li>
+        </ul>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-white font-bold text-sm">Layanan Pelanggan</p>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Konsultasi & Pemesanan WhatsApp:<br />
+          <strong class="text-slate-200">Senin - Minggu (08.00 - 21.00 WIB)</strong>
+        </p>
+        <div class="pt-2">
+          <button id="footerWaBtn" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-sm cursor-pointer">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Chat WhatsApp CS
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pt-8 border-t border-slate-900 text-center text-[11px] text-slate-500 space-y-2">
+      <p>© 2026 BPCareU Official Wellness Store. Seluruh Hak Cipta Dilindungi Undang-Undang.</p>
+      <p class="max-w-2xl mx-auto text-slate-600">
+        Disclaimer: Khasiat dapat bervariasi pada setiap individu tergantung kondisi fisik, metabolisme, dan keteraturan konsumsi. Suplemen herbal ini adalah penunjang gaya hidup sehat.
+      </p>
+    </div>
+  </div>
+</footer>

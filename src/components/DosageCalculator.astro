@@ -1,0 +1,66 @@
+---
+// DosageCalculator.astro - Kalkulator Dosis British Propolis
+---
+<section id="kalkulator" class="py-16 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(#b91c1c_1px,transparent_1px)] [background-size:20px_20px] opacity-15"></div>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+      <span class="inline-block px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black uppercase tracking-wider">
+        Panduan Dosis Akurat
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white">
+        Kalkulator Kebutuhan Dosis Propolis
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-300">
+        Standar British Propolis: <strong>1 tetes per 10 kg berat badan</strong>. Masukkan data Anda untuk mendapatkan anjuran takaran dan waktu minum yang tepat.
+      </p>
+    </div>
+
+    <div class="bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-xl space-y-6">
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="space-y-1.5">
+          <label for="calcWeight" class="text-xs font-bold text-slate-300">Berat Badan (kg):</label>
+          <input type="number" id="calcWeight" value="60" min="5" max="150" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-400" />
+        </div>
+        <div class="space-y-1.5">
+          <label for="calcAgeCategory" class="text-xs font-bold text-slate-300">Kategori Usia:</label>
+          <select id="calcAgeCategory" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <option value="adult">Dewasa (&gt;12 tahun)</option>
+            <option value="child">Anak-anak (1-12 tahun)</option>
+          </select>
+        </div>
+        <div class="space-y-1.5">
+          <label for="calcPurpose" class="text-xs font-bold text-slate-300">Tujuan Konsumsi:</label>
+          <select id="calcPurpose" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+            <option value="stamina">Jaga Stamina / Imunitas Harian</option>
+            <option value="recovery">Pemulihan Sakit / Demam / Batuk</option>
+            <option value="chronic">Asam Urat / Kolesterol / Diabetes</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <button id="calculateDoseBtn" type="button" class="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm shadow-md transition-all flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-calculator"></i>
+          Hitung Dosis Tetesan Sekarang
+        </button>
+      </div>
+
+      <!-- Result Box -->
+      <div id="calcResultBox" class="p-5 rounded-2xl bg-slate-900/90 border border-slate-700 space-y-2 text-xs sm:text-sm">
+        <div class="flex items-center gap-2 text-amber-400 font-bold">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Rekomendasi Takaran Dosis Anda:</span>
+        </div>
+        <p id="calcDoseText" class="font-extrabold text-white text-base sm:text-lg">
+          6 Tetes per minum, dikonsumsi 2 kali sehari (Pagi sebelum sarapan & Malam sebelum tidur).
+        </p>
+        <p id="calcProductSuggestion" class="text-xs text-slate-400">
+          Rekomendasi Produk: <strong>British Propolis Regular (Merah)</strong>. Larutkan dalam 1/3 gelas air hangat kuku. Aduk merata menggunakan sendok non-logam.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

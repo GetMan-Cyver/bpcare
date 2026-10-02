@@ -1,0 +1,43 @@
+---
+// CartDrawer.astro - Sliding Cart Drawer Keranjang Belanja
+---
+<div id="cartDrawerBackdrop" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-200"></div>
+<div id="cartDrawer" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-out">
+  
+  <!-- Drawer Header -->
+  <div class="p-4 sm:p-5 bg-slate-900 text-white flex items-center justify-between shrink-0">
+    <div class="flex items-center gap-2.5">
+      <i class="fa-solid fa-cart-shopping text-amber-400"></i>
+      <h3 class="font-black text-sm">Keranjang Belanja</h3>
+      <span id="drawerBadgeCount" class="text-[10px] font-black px-2 py-0.5 rounded-full bg-bpRed-700 text-white">0</span>
+    </div>
+    <button id="closeCartDrawerBtn" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer" title="Tutup Keranjang">
+      <i class="fa-solid fa-xmark text-sm"></i>
+    </button>
+  </div>
+
+  <!-- Items List -->
+  <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 space-y-3">
+    <!-- Rendered dynamically -->
+  </div>
+
+  <!-- Drawer Footer -->
+  <div class="p-5 border-t border-slate-200 bg-slate-50 space-y-4 shrink-0">
+    <div class="space-y-1 text-xs">
+      <div class="flex justify-between text-slate-500">
+        <span>Subtotal:</span>
+        <span id="drawerSubtotal" class="font-bold text-slate-800">Rp 0</span>
+      </div>
+      <div class="flex justify-between text-sm font-black text-slate-900 pt-2 border-t border-slate-200">
+        <span>Total Bayar:</span>
+        <span id="drawerTotal" class="text-bpRed-700 text-base font-black">Rp 0</span>
+      </div>
+    </div>
+
+    <button id="openCheckoutBtn" disabled class="w-full py-3.5 rounded-2xl bg-bpRed-700 disabled:bg-slate-300 disabled:cursor-not-allowed hover:bg-bpRed-800 text-white font-extrabold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer">
+      <i class="fa-brands fa-whatsapp text-base"></i>
+      <span>Lanjutkan ke Checkout WhatsApp</span>
+    </button>
+  </div>
+
+</div>

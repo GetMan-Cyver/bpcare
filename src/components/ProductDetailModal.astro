@@ -1,0 +1,101 @@
+---
+// ProductDetailModal.astro - Modal Detail Lengkap Produk
+---
+<div id="productDetailModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-5 hidden opacity-0 transition-opacity duration-200">
+  <div class="bg-white rounded-3xl w-full max-w-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] animate-in fade-in zoom-in-95 duration-150">
+    
+    <!-- Modal Header -->
+    <div class="p-4 sm:p-5 bg-gradient-to-r from-bpRed-900 via-bpRed-800 to-slate-900 text-white flex justify-between items-center shrink-0">
+      <div class="flex items-center gap-2">
+        <span id="detailCategoryBadge" class="px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 font-black text-[10px] uppercase tracking-wider">BP Group</span>
+        <span id="detailBadgeTag" class="text-xs text-amber-200 font-bold hidden sm:inline">Original Product</span>
+      </div>
+      <button id="closeDetailModalBtn" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer" title="Tutup Modal">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="p-5 sm:p-7 overflow-y-auto space-y-5 text-xs sm:text-sm">
+      <div class="grid sm:grid-cols-12 gap-6 items-start">
+        
+        <!-- Foto Produk -->
+        <div class="sm:col-span-5 flex flex-col items-center">
+          <div class="w-full aspect-square rounded-2xl bg-gradient-to-tr from-slate-50 to-red-50/50 p-4 border border-slate-200/80 flex items-center justify-center overflow-hidden shadow-2xs">
+            <img id="detailImg" src="" alt="Detail Produk" class="max-h-56 object-contain drop-shadow-md" />
+          </div>
+          <div class="mt-3 w-full p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-[11px]">
+            <span class="text-slate-500">Volume / Isi:</span>
+            <span id="detailVolume" class="font-extrabold text-slate-800">-</span>
+          </div>
+        </div>
+
+        <!-- Keterangan & Manfaat -->
+        <div class="sm:col-span-7 space-y-4">
+          <div>
+            <h3 id="detailTitle" class="text-lg sm:text-xl font-black text-slate-900 leading-snug">Nama Produk</h3>
+            <div class="flex items-baseline gap-2 mt-1">
+              <span id="detailPrice" class="text-xl sm:text-2xl font-black text-bpRed-700">Rp 0</span>
+              <span class="text-[10px] text-slate-400 font-medium">Harga Resmi</span>
+            </div>
+          </div>
+
+          <!-- Izin BPOM -->
+          <div class="p-3 rounded-xl bg-blue-50 border border-blue-200 text-blue-900 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-blue-700 text-sm"></i>
+              <span class="font-bold">Izin Registrasi BPOM RI:</span>
+            </div>
+            <span id="detailBpom" class="font-mono font-black text-blue-800">-</span>
+          </div>
+
+          <!-- Deskripsi -->
+          <div class="space-y-1.5">
+            <h4 class="font-black text-xs uppercase tracking-wider text-slate-500">Uraian & Khasiat:</h4>
+            <p id="detailDesc" class="text-slate-600 text-xs sm:text-sm leading-relaxed"></p>
+          </div>
+
+          <!-- Khasiat List -->
+          <div class="space-y-1.5">
+            <h4 class="font-black text-xs uppercase tracking-wider text-slate-500">Manfaat Utama:</h4>
+            <ul id="detailBenefitsList" class="space-y-1 text-xs text-slate-600">
+            </ul>
+          </div>
+
+          <!-- Aturan Pakai -->
+          <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/80 space-y-1 text-xs">
+            <p class="font-bold text-amber-950 flex items-center gap-1.5">
+              <i class="fa-solid fa-mortar-pestle text-amber-700"></i> Aturan Konsumsi / Pakai:
+            </p>
+            <p id="detailUsage" class="text-slate-700 leading-relaxed"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal Footer (Actions) -->
+    <div class="p-4 sm:p-5 border-t border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+      <!-- Qty selector -->
+      <div class="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
+        <span class="text-xs font-bold text-slate-600">Kuantitas:</span>
+        <div class="flex items-center border border-slate-300 rounded-xl bg-white overflow-hidden">
+          <button id="detailQtyMinus" class="w-8 h-8 flex items-center justify-center font-bold text-slate-600 hover:bg-slate-100 cursor-pointer">-</button>
+          <input type="number" id="detailQtyInput" value="1" min="1" max="99" class="w-10 text-center text-xs font-bold text-slate-800 focus:outline-none" />
+          <button id="detailQtyPlus" class="w-8 h-8 flex items-center justify-center font-bold text-slate-600 hover:bg-slate-100 cursor-pointer">+</button>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex items-center gap-2 w-full sm:w-auto">
+        <button id="detailAddToCartBtn" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl border border-bpRed-700 text-bpRed-700 hover:bg-red-50 text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-cart-plus"></i> Tambah Keranjang
+        </button>
+        <button id="detailBuyWABtn" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white text-xs font-bold shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer">
+          <i class="fa-brands fa-whatsapp text-sm"></i> Beli Sekarang
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

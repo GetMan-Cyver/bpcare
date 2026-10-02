@@ -1,0 +1,70 @@
+---
+// index.astro - Halaman Utama Toko Resmi BPCareU
+import Layout from '../layouts/Layout.astro';
+import TopBar from '../components/TopBar.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import TrustBadges from '../components/TrustBadges.astro';
+import ProductCatalog from '../components/ProductCatalog.astro';
+import PackagePricing from '../components/PackagePricing.astro';
+import DosageCalculator from '../components/DosageCalculator.astro';
+import Features from '../components/Features.astro';
+import FAQ from '../components/FAQ.astro';
+import Footer from '../components/Footer.astro';
+import ProductDetailModal from '../components/ProductDetailModal.astro';
+import CartDrawer from '../components/CartDrawer.astro';
+import CheckoutModal from '../components/CheckoutModal.astro';
+import AdminLoginModal from '../components/AdminLoginModal.astro';
+import AdminDashboardModal from '../components/AdminDashboardModal.astro';
+import ProductFormModal from '../components/ProductFormModal.astro';
+import DeleteConfirmModal from '../components/DeleteConfirmModal.astro';
+import Toast from '../components/Toast.astro';
+---
+
+<Layout>
+  <!-- Baris Pengumuman Resmi Paling Atas -->
+  <TopBar />
+
+  <!-- Navigasi & Header Utama -->
+  <Navbar />
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <Hero />
+
+    <!-- Legalitas & Sertifikasi BPOM/Halal -->
+    <TrustBadges />
+
+    <!-- Katalog Produk Resmi -->
+    <ProductCatalog />
+
+    <!-- Tabel Paket Kemitraan Reseller -->
+    <PackagePricing />
+
+    <!-- Kalkulator Dosis Propolis Berdasarkan Berat Badan -->
+    <DosageCalculator />
+
+    <!-- Keunggulan Mutu Produk -->
+    <Features />
+
+    <!-- Tanya Jawab Seputar Produk (FAQ) -->
+    <FAQ />
+  </main>
+
+  <!-- Footer & Informasi Kontak -->
+  <Footer />
+
+  <!-- Modals & Slide-over Drawers -->
+  <ProductDetailModal />
+  <CartDrawer />
+  <CheckoutModal />
+  <AdminLoginModal />
+  <AdminDashboardModal />
+  <ProductFormModal />
+  <DeleteConfirmModal />
+  <Toast />
+
+  <!-- Client-side Logic Script Bundled by Vite & Astro -->
+  <script src="../scripts/app.ts"></script>
+</Layout>

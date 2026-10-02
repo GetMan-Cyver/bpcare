@@ -1,0 +1,2666 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPCareU - Toko Resmi British Propolis & Produk Kesehatan BP Group</title>
+  <meta name="description" content="Toko resmi produk BP Gcdroup: British Propolis Reguler, Green Kids, Steffi Stevia, Brassic Eye, Brassic Pro, dan BP Norway. 100% Original bersertifikat resmi BPOM & Halal.">
+
+  <!-- ====================================================================
+       PANDUAN LENGKAP KUSTOMISASI FAVICON BPCAREU:
+       Browser membaca icon tab dari elemen <link rel="icon"> di bawah ini.
+       
+       PILIHAN 1 (Rekomendasi - Menggunakan File Gambar Sendiri .PNG / .ICO):
+       1. Siapkan file logo Anda berukuran 32x32, 48x48, atau 64x64 piksel (contoh: favicon.png atau favicon.ico).
+       2. Letakkan file tersebut di folder yang sama dengan file index.html ini.
+       3. Ganti tag link di bawah menjadi:
+          <link rel="icon" type="image/png" href="favicon.png">
+          
+       PILIHAN 2 (Menggunakan URL Gambar Online / CDN / Hosting):
+       Jika gambar logo/favicon Anda sudah diunggah di server cloud/CDN:
+          <link rel="icon" type="image/png" href="https://domainanda.com/assets/favicon.png">
+          
+       PILIHAN 3 (Bawaan Aktif - Inline Vector SVG Brand BP Resmi):
+       Kode di bawah menggunakan SVG murni beresolusi tinggi (kombinasi Merah Marun BP,
+       Emblem Shield, dan Tipografi Emas Premium). Tampil sangat tajam di layar Retina & Smartphone.
+  ==================================================================== -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='bpGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23b91c1c'/%3E%3Cstop offset='60%25' stop-color='%237f1d1d'/%3E%3Cstop offset='100%25' stop-color='%23450a0a'/%3E%3C/linearGradient%3E%3ClinearGradient id='goldGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23fef08a'/%3E%3Cstop offset='50%25' stop-color='%23f59e0b'/%3E%3Cstop offset='100%25' stop-color='%23d97706'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='128' height='128' rx='28' fill='url(%23bpGrad)'/%3E%3Crect x='6' y='6' width='116' height='116' rx='22' fill='none' stroke='url(%23goldGrad)' stroke-width='3' stroke-opacity='0.6'/%3E%3Cpath d='M64 16 L104 36 L104 68 C104 92 64 112 64 112 C64 112 24 92 24 68 L24 36 Z' fill='%23991b1b' fill-opacity='0.4' stroke='url(%23goldGrad)' stroke-width='2' stroke-linejoin='round'/%3E%3Ctext x='64' y='76' font-size='46' font-family='Plus Jakarta Sans, Montserrat, Impact, Arial, sans-serif' font-weight='900' font-style='italic' fill='url(%23goldGrad)' text-anchor='middle' letter-spacing='-2' filter='drop-shadow(0px 3px 6px rgba(0,0,0,0.5))'%3EBP%3C/text%3E%3Ccircle cx='64' cy='94' r='4' fill='%23fbbf24'/%3E%3C/svg%3E">
+
+  <!-- Apple Touch Icon untuk Bookmark di Layar Depan iPhone / iPad / Android -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%23991b1b'/%3E%3Ctext x='64' y='80' font-size='50' font-family='sans-serif' font-weight='900' font-style='italic' fill='%23fbbf24' text-anchor='middle'%3EBP%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            bpRed: {
+              50: '#fef2f2',
+              100: '#fee2e2',
+              600: '#dc2626',
+              700: '#b91c1c',
+              800: '#991b1b',
+              900: '#7f1d1d',
+              950: '#450a0a',
+            },
+            bpGold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-bpRed-100 selection:text-bpRed-900 min-h-screen flex flex-col justify-between">
+
+  <!-- TOP BAR PENGUMUMAN RESMI -->
+  <div class="bg-gradient-to-r from-bpRed-950 via-bpRed-900 to-slate-900 text-white text-[11px] sm:text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-bpGold-500 text-slate-950 font-extrabold text-[10px]">RESMI</span>
+        <span class="font-medium text-slate-200">Garansi 100% Original BP Group • Terdaftar BPOM RI & Halal MUI</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-slate-300">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-truck-fast text-bpGold-400"></i> Kirim ke Seluruh Indonesia</span>
+        <span>•</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> Segel Hologram Asli</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER & NAVBAR UTAMA -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- ====================================================================
+             PANDUAN KUSTOMISASI LOGO:
+             Untuk menggunakan file logo gambar, ganti isi elemen di bawah:
+             Contoh:
+             <a href="#" class="flex items-center gap-3">
+               <img src="logo-bpcareu.png" alt="BPCareU Logo" class="h-10 w-auto">
+             </a>
+        ==================================================================== -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-bpRed-700 via-bpRed-800 to-bpRed-950 flex items-center justify-center text-white shadow-md shadow-bpRed-900/20 group-hover:scale-105 transition-transform">
+            <span class="font-black text-xl tracking-tighter text-amber-300">BP</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-black text-xl tracking-tight text-slate-900">BPCare<span class="text-bpRed-700">U</span></span>
+              <span class="px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-red-100 text-bpRed-800">Store</span>
+            </div>
+            <p class="text-[10px] text-slate-400 font-semibold tracking-wide">Official Wellness BP Group</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-bold text-slate-600">
+          <a href="#katalog" class="hover:text-bpRed-700 transition-colors">Produk</a>
+          <a href="#paket-harga" class="hover:text-bpRed-700 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-bpRed-600 animate-ping"></span>
+            Kemitraan
+          </a>
+          <a href="#kalkulator" class="hover:text-bpRed-700 transition-colors">Kalkulator</a>
+          <a href="#keunggulan" class="hover:text-bpRed-700 transition-colors">Keunggulan</a>
+          <a href="#legalitas" class="hover:text-bpRed-700 transition-colors">Legalitas</a>
+          <a href="#faq" class="hover:text-bpRed-700 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right Action Items (Ukuran & Tata Letak Disamakan) -->
+        <div class="flex items-center gap-2 sm:gap-2.5">
+          <!-- Tombol Akses Admin Dashboard -->
+          <button onclick="openAdminPortal()" class="h-10 px-3.5 sm:px-4 rounded-xl border border-slate-200 hover:border-slate-800 hover:bg-slate-900 hover:text-white text-slate-700 transition-all inline-flex items-center justify-center gap-2 text-xs font-bold group shadow-2xs" title="Panel Admin Database Google Sheets">
+            <i class="fa-solid fa-lock text-slate-500 group-hover:text-amber-300 transition-colors"></i>
+            <span>Admin</span>
+          </button>
+
+          <!-- Tombol Keranjang Belanja -->
+          <button id="cartBtn" onclick="toggleCartDrawer(true)" class="relative h-10 px-3.5 sm:px-4 rounded-xl border border-slate-200 hover:border-bpRed-600 hover:bg-red-50/50 text-slate-700 transition-all inline-flex items-center justify-center gap-2 text-xs font-bold group shadow-2xs">
+            <i class="fa-solid fa-cart-shopping text-bpRed-700 text-sm group-hover:scale-110 transition-transform"></i>
+            <span>Keranjang</span>
+            <span id="cartCountBadge" class="absolute -top-1.5 -right-1.5 bg-bpGold-500 text-slate-950 font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center ring-2 ring-white shadow-xs">0</span>
+          </button>
+
+          <!-- Tombol Daftar Agen (dengan ikon Member) -->
+          <a href="#paket-harga" class="h-10 px-3.5 sm:px-4 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-bold text-xs shadow-md shadow-bpRed-800/20 border border-bpRed-700 hover:border-bpRed-800 transition-all inline-flex items-center justify-center gap-2">
+            <i class="fa-solid fa-id-card-clip text-amber-300 text-sm"></i>
+            <span>Daftar Agen</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-red-50/40 via-white to-slate-50 pt-10 pb-16 sm:py-20 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bpRed-100/80 border border-bpRed-200 text-bpRed-900 text-xs font-bold">
+            <i class="fa-solid fa-crown text-bpGold-500"></i>
+            <span>Distributor Resmi Produk Kesehatan BP Group</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]">
+            Solusi Kesehatan Alami <br class="hidden sm:inline">
+            <span class="text-bpRed-700 underline decoration-bpGold-400 decoration-wavy decoration-2">Keluarga Indonesia</span> & Peluang Usaha
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Menyediakan produk original <strong>British Propolis (Reguler & Kids)</strong> dengan konsentrasi bioflavonoid 4x lebih pekat, <strong>Steffi Stevia</strong> pemanis 0 kalori, <strong>Brassic Eye</strong>, <strong>Brassic Pro</strong>, serta <strong>BP Norway Salmon Oil</strong>.
+          </p>
+
+          <!-- USP Cards Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+            <div class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+              <div class="w-8 h-8 rounded-xl bg-red-100 text-bpRed-700 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-shield-virus text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 leading-tight">4x Bioflavonoid Lebah UK</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+              <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-leaf text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 leading-tight">Steffi Stevia 0 Kalori</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs col-span-2 sm:col-span-1">
+              <div class="w-8 h-8 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-award text-sm"></i>
+              </div>
+              <span class="text-xs font-bold text-slate-800 leading-tight">BPOM RI & Halal MUI</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center gap-3.5 pt-3 justify-center lg:justify-start">
+            <a href="#katalog" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-extrabold text-sm shadow-lg shadow-bpRed-800/25 transition-all text-center flex items-center justify-center gap-2">
+              <i class="fa-solid fa-bag-shopping"></i>
+              Lihat Katalog Produk
+            </a>
+            <a href="#paket-harga" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-sm border border-slate-300 transition-all text-center flex items-center justify-center gap-2 shadow-2xs">
+              <i class="fa-solid fa-tags text-bpRed-700"></i>
+              Daftar Paket Kemitraan
+            </a>
+          </div>
+
+          <div class="pt-2 flex items-center justify-center lg:justify-start gap-4 text-xs text-slate-500 font-medium">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-box text-emerald-600"></i> Ready Stock Fresh Batch</span>
+            <span>•</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-handshake text-emerald-600"></i> Bimbingan Penjualan Reseller</span>
+          </div>
+        </div>
+
+        <!-- Visual Hero Column -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-sm sm:max-w-md bg-gradient-to-b from-white to-red-50/40 p-6 rounded-3xl border border-red-100 shadow-2xl shadow-red-950/5">
+            <div class="absolute -top-4 -right-4 bg-slate-900 text-white px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2.5 z-20">
+              <i class="fa-solid fa-award text-amber-400 text-lg"></i>
+              <div>
+                <p class="text-[9px] font-medium text-slate-300 uppercase leading-none">Standar Inggris</p>
+                <p class="text-xs font-black">100% Produk Original</p>
+              </div>
+            </div>
+
+            <!-- Graphic Banner Lineup -->
+            <div class="py-6 flex flex-col items-center justify-center text-center">
+              <div class="w-full h-56 rounded-2xl bg-gradient-to-tr from-slate-100 via-amber-50 to-red-50 p-4 border border-slate-200/80 flex items-center justify-center overflow-hidden relative group">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-luvn2ibimi4426.webp" alt="British Propolis Produk" class="max-h-48 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/400x300/991b1b/ffffff?text=BP+Group+Products';">
+              </div>
+              <p class="text-xs font-bold text-slate-800 mt-4">Jajaran Produk Lengkap BP Group</p>
+              <p class="text-[11px] text-slate-500">British Propolis • Steffi • Brassic Eye • Brassic Pro • BP Norway</p>
+            </div>
+
+            <div class="bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800 font-black text-sm">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-slate-800">Konsultasi Dosis Gratis</p>
+                  <p class="text-[11px] text-slate-500">Dampingan hingga terasa khasiatnya</p>
+                </div>
+              </div>
+              <a href="#kalkulator" class="text-xs font-extrabold text-bpRed-700 bg-red-50 px-2.5 py-1.5 rounded-xl hover:bg-red-100 transition-colors">
+                Hitung <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES & LEGALITAS -->
+  <section id="legalitas" class="py-10 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        
+        <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/80 flex items-center gap-3.5 hover:border-bpRed-400 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div>
+            <span class="text-xs font-extrabold text-slate-900 block">BPOM RI Resmi</span>
+            <span class="text-[11px] text-slate-500 block leading-tight">POM TR 183610771</span>
+            <a href="https://cekbpom.pom.go.id" target="_blank" rel="noopener noreferrer" class="text-[10px] text-bpRed-700 font-bold hover:underline inline-flex items-center gap-1 mt-0.5">
+              Cek Portal BPOM <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/80 flex items-center gap-3.5 hover:border-bpRed-400 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+          <div>
+            <span class="text-xs font-extrabold text-slate-900 block">Halal MUI & Kemenag</span>
+            <span class="text-[11px] text-slate-500 block leading-tight">Sertifikat Resmi</span>
+            <span class="text-[10px] text-emerald-700 font-bold mt-0.5 block">100% Non-Alkohol</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/80 flex items-center gap-3.5 hover:border-bpRed-400 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-red-100 text-bpRed-800 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-flask-vial"></i>
+          </div>
+          <div>
+            <span class="text-xs font-extrabold text-slate-900 block">Formulasi Inggris</span>
+            <span class="text-[11px] text-slate-500 block leading-tight">Bridgwater, United Kingdom</span>
+            <span class="text-[10px] text-bpRed-700 font-bold mt-0.5 block">Standar Eropa GMP</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/80 flex items-center gap-3.5 hover:border-bpRed-400 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <div>
+            <span class="text-xs font-extrabold text-slate-900 block">Herbal Alami Murni</span>
+            <span class="text-[11px] text-slate-500 block leading-tight">Ekstrak Lebah Pilihan</span>
+            <span class="text-[10px] text-amber-700 font-bold mt-0.5 block">Aman & Teruji Klinis</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KATALOG PRODUK RESMI BP GROUP -->
+  <section id="katalog" class="py-16 sm:py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-bpRed-100 text-bpRed-900 text-xs font-black uppercase tracking-wider">
+          Katalog Resmi BP Group
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Pilihan Varian Produk Kesehatan
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Klik pada kartu produk untuk melihat <strong>manfaat lengkap, nomor registrasi BPOM, aturan pakai,</strong> dan melakukan pemesanan.
+        </p>
+
+        <!-- Kategori Filter -->
+        <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+          <button onclick="setProductFilter('all', this)" class="prod-filter-btn px-4 py-2 rounded-xl text-xs font-extrabold transition-all bg-bpRed-800 text-white shadow-sm">
+            Semua Produk
+          </button>
+          <button onclick="setProductFilter('propolis', this)" class="prod-filter-btn px-4 py-2 rounded-xl text-xs font-extrabold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+            British Propolis
+          </button>
+          <button onclick="setProductFilter('stevia', this)" class="prod-filter-btn px-4 py-2 rounded-xl text-xs font-extrabold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+            Steffi Stevia
+          </button>
+          <button onclick="setProductFilter('specialty', this)" class="prod-filter-btn px-4 py-2 rounded-xl text-xs font-extrabold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+            Brassic & Norway
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid Kartu Produk -->
+      <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DAFTAR HARGA PAKET KEMITRAAN BP GROUP -->
+  <section id="paket-harga" class="py-16 sm:py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-bpGold-400/20 text-amber-900 text-xs font-black uppercase tracking-wider border border-amber-300">
+          Daftar Harga Resmi BP Group
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Paket Belanja & Kemitraan Reseller
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Berlaku untuk seluruh produk BP Group: <strong>British Propolis (Reguler/Kids), Steffi, Brassic Eye, Brassic Pro, dan BP Norway</strong>. Makin banyak jumlah paket, modal makin hemat dan potensi keuntungan makin besar!
+        </p>
+      </div>
+
+      <!-- Tabel Paket Responsif Sesuai Referensi Gambar -->
+      <div class="max-w-5xl mx-auto border-2 border-bpRed-800 rounded-3xl overflow-hidden shadow-xl bg-white">
+        
+        <!-- Table Header Banner -->
+        <div class="bg-bpRed-800 text-white p-4 sm:p-5 text-center">
+          <h3 class="text-lg sm:text-xl font-black tracking-wider uppercase">Daftar Harga Paket Kemitraan BP Group</h3>
+          <p class="text-xs text-amber-200 font-semibold mt-1">British Propolis (Reg) • Steffi • Brassic Eye • Brassic Pro • Norway</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-red-50/80 text-bpRed-950 font-black border-b border-red-200 uppercase tracking-wider text-[11px] sm:text-xs">
+                <th class="py-3.5 px-4 sm:px-6">Nama Paket</th>
+                <th class="py-3.5 px-4 sm:px-6 text-center">Jumlah & Harga Satuan</th>
+                <th class="py-3.5 px-4 sm:px-6 text-right">Total Harga</th>
+                <th class="py-3.5 px-4 sm:px-6 text-center">Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="packageTableBody" class="divide-y divide-slate-100 font-medium text-slate-800">
+              <!-- Injected via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+          <span class="flex items-center gap-1.5 font-bold text-slate-700">
+            <i class="fa-solid fa-circle-check text-emerald-600"></i> Bebas campur varian produk resmi BP Group
+          </span>
+          <span class="italic text-[11px] text-bpRed-800 font-bold">* Harga berlaku per 1 September 2026</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KALKULATOR DOSIS BRITISH PROPOLIS -->
+  <section id="kalkulator" class="py-16 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#b91c1c_1px,transparent_1px)] [background-size:20px_20px] opacity-15"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+        <span class="inline-block px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black uppercase tracking-wider">
+          Panduan Dosis Akurat
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white">
+          Kalkulator Kebutuhan Dosis Propolis
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300">
+          Standar British Propolis: <strong>1 tetes per 10 kg berat badan</strong>. Masukkan data Anda untuk mendapatkan anjuran takaran dan waktu minum yang tepat.
+        </p>
+      </div>
+
+      <div class="bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-xl space-y-6">
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div class="space-y-1.5">
+            <label for="calcWeight" class="text-xs font-bold text-slate-300">Berat Badan (kg):</label>
+            <input type="number" id="calcWeight" value="60" min="5" max="150" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+          </div>
+          <div class="space-y-1.5">
+            <label for="calcAgeCategory" class="text-xs font-bold text-slate-300">Kategori Usia:</label>
+            <select id="calcAgeCategory" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+              <option value="adult">Dewasa (>12 tahun)</option>
+              <option value="child">Anak-anak (1-12 tahun)</option>
+            </select>
+          </div>
+          <div class="space-y-1.5">
+            <label for="calcPurpose" class="text-xs font-bold text-slate-300">Tujuan Konsumsi:</label>
+            <select id="calcPurpose" class="w-full bg-slate-900 border border-slate-600 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+              <option value="stamina">Jaga Stamina / Imunitas Harian</option>
+              <option value="recovery">Pemulihan Sakit / Demam / Batuk</option>
+              <option value="chronic">Asam Urat / Kolesterol / Diabetes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button onclick="calculateDose()" class="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm shadow-md transition-all flex items-center gap-2">
+            <i class="fa-solid fa-calculator"></i>
+            Hitung Dosis Tetesan Sekarang
+          </button>
+        </div>
+
+        <!-- Result Box -->
+        <div id="calcResultBox" class="p-5 rounded-2xl bg-slate-900/90 border border-slate-700 space-y-2 text-xs sm:text-sm">
+          <div class="flex items-center gap-2 text-amber-400 font-bold">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Rekomendasi Takaran Dosis Anda:</span>
+          </div>
+          <p id="calcDoseText" class="font-extrabold text-white text-base sm:text-lg">
+            6 Tetes per minum, dikonsumsi 2 kali sehari.
+          </p>
+          <p id="calcProductSuggestion" class="text-xs text-slate-400">
+            Gunakan <strong>British Propolis Regular (Dewasa)</strong>. Larutkan dalam 1/3 gelas air hangat kuku. Aduk menggunakan sendok non-logam.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN & TESTIMONI -->
+  <section id="keunggulan" class="py-16 sm:py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="inline-block px-3 py-1 rounded-full bg-bpRed-100 text-bpRed-900 text-xs font-black uppercase tracking-wider">
+          Standar Kualitas Terbaik
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Mengapa Memilih Produk BP Group?
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-red-100 text-bpRed-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h3 class="font-extrabold text-base text-slate-900">Bioflavonoid 4x Lebih Pekat</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Dibuat dari 6.000 lebah yang bekerja keras selama setahun untuk menghasilkan 1 botol British Propolis berstandar Inggris Raya.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3 class="font-extrabold text-base text-slate-900">Steffi: Pemanis Sehat 0 Kalori</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Pengganti gula pasir dari daun Stevia murni dengan indeks glikemik 0. Sangat ramah penderita diabetes, keto, dan diet sehat tanpa rasa getir.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <h3 class="font-extrabold text-base text-slate-900">Sinergi Nutrisi Lengkap</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Didukung Brassic Eye untuk retina & mata lelah, Brassic Pro untuk sendi, serta BP Norway dengan asam lemak Omega-3 murni Atlantik Utara.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (ACCORDION) -->
+  <section id="faq" class="py-16 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Pertanyaan Umum (FAQ)</h2>
+        <p class="text-xs sm:text-sm text-slate-500">Hal yang sering ditanyakan seputar produk dan kemitraan BP Group</p>
+      </div>
+
+      <div class="space-y-3" id="faqAccordion">
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full p-4 sm:p-5 text-left font-bold text-xs sm:text-sm text-slate-800 flex justify-between items-center gap-4 hover:bg-slate-50">
+            <span>Berapa lama khasiat British Propolis biasanya mulai terasa?</span>
+            <i id="faqIcon-1" class="fa-solid fa-chevron-down text-bpRed-700 transition-transform"></i>
+          </button>
+          <div id="faqAnswer-1" class="hidden px-5 pb-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Umumnya konsumen mulai merasakan perubahan stamina dan imunitas dalam 21 hari dengan konsumsi rutin sesuai anjuran takaran berat badan.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full p-4 sm:p-5 text-left font-bold text-xs sm:text-sm text-slate-800 flex justify-between items-center gap-4 hover:bg-slate-50">
+            <span>Apakah produk-produk ini boleh dicampur dalam satu paket kemitraan?</span>
+            <i id="faqIcon-2" class="fa-solid fa-chevron-down text-bpRed-700 transition-transform"></i>
+          </button>
+          <div id="faqAnswer-2" class="hidden px-5 pb-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Ya, seluruh paket kemitraan (Family 3 pcs, Agent 5 pcs, Agent Plus 10 pcs, dst.) memperbolehkan Anda mencampur varian resmi BP Group (BP Reguler, BP Kids, Steffi, Brassic Eye, Brassic Pro, atau BP Norway).
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full p-4 sm:p-5 text-left font-bold text-xs sm:text-sm text-slate-800 flex justify-between items-center gap-4 hover:bg-slate-50">
+            <span>Bagaimana cara membedakan produk British Propolis Asli vs Palsu?</span>
+            <i id="faqIcon-3" class="fa-solid fa-chevron-down text-bpRed-700 transition-transform"></i>
+          </button>
+          <div id="faqAnswer-3" class="hidden px-5 pb-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Produk asli memiliki segel hologram berlogo British Propolis, botol kaca gelap pekat, tulisan emboss di kemasan, nomor registrasi POM TR resmi yang dapat dicek di cekbpom.pom.go.id, dan dijual dengan harga resmi yang seragam.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-4 md:col-span-2">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-bpRed-700 flex items-center justify-center font-black text-amber-300 text-lg">BP</div>
+            <span class="font-black text-xl tracking-tight text-white">BPCare<span class="text-bpRed-600">U</span></span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+            Distributor resmi produk kesehatan alami BP Group. Menghadirkan British Propolis, Steffi Stevia, Brassic Eye, Brassic Pro, dan BP Norway untuk perlindungan imunitas keluarga Anda.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800 text-[11px] font-bold">
+              <i class="fa-solid fa-shield-halved"></i> 100% Produk Original BPOM
+            </span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <p class="text-white font-bold text-sm">Navigasi Halaman</p>
+          <ul class="space-y-1.5 text-xs text-slate-400">
+            <li><a href="#katalog" class="hover:text-amber-400 transition-colors">Katalog Produk Satuan</a></li>
+            <li><a href="#paket-harga" class="hover:text-amber-400 transition-colors">Daftar Paket Kemitraan</a></li>
+            <li><a href="#kalkulator" class="hover:text-amber-400 transition-colors">Kalkulator Dosis Propolis</a></li>
+            <li><a href="#legalitas" class="hover:text-amber-400 transition-colors">Legalitas Izin BPOM</a></li>
+            <li><button onclick="openAdminPortal()" class="text-left hover:text-amber-400 text-amber-400 font-bold transition-colors"><i class="fa-solid fa-lock text-[10px] mr-1"></i> Portal Admin Database</button></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <p class="text-white font-bold text-sm">Layanan Pelanggan</p>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Konsultasi & Pemesanan WhatsApp:<br>
+            <strong class="text-slate-200">Senin - Minggu (08.00 - 21.00 WIB)</strong>
+          </p>
+          <div class="pt-2">
+            <button onclick="buyCurrentDetailWA()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Chat WhatsApp CS
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-900 text-center text-[11px] text-slate-500 space-y-2">
+        <p>© 2026 BPCareU Official Wellness Store. Seluruh Hak Cipta Dilindungi Undang-Undang.</p>
+        <p class="max-w-2xl mx-auto text-slate-600">
+          Disclaimer: Khasiat dapat bervariasi pada setiap individu tergantung kondisi fisik, metabolisme, dan keteraturan konsumsi. Suplemen herbal ini adalah penunjang gaya hidup sehat.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       MODAL 1: DETAIL LENGKAP PRODUK (MUNCUL SAAT CARD DIKLIK)
+  ==================================================================== -->
+  <div id="productDetailModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-5 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] animate-in fade-in zoom-in-95 duration-150">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-5 bg-gradient-to-r from-bpRed-900 via-bpRed-800 to-slate-900 text-white flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2">
+          <span id="detailCategoryBadge" class="px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 font-black text-[10px] uppercase tracking-wider">BP Group</span>
+          <span id="detailBadgeTag" class="text-xs text-amber-200 font-bold hidden sm:inline">Original Product</span>
+        </div>
+        <button onclick="closeProductDetailModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors" title="Tutup Modal">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-5 sm:p-7 overflow-y-auto space-y-5 text-xs sm:text-sm">
+        <div class="grid sm:grid-cols-12 gap-6 items-start">
+          
+          <!-- Foto Produk -->
+          <div class="sm:col-span-5 flex flex-col items-center">
+            <div class="w-full aspect-square rounded-2xl bg-gradient-to-tr from-slate-50 to-red-50/50 p-4 border border-slate-200/80 flex items-center justify-center overflow-hidden shadow-2xs">
+              <img id="detailImg" src="" alt="Detail Produk" class="max-h-56 object-contain drop-shadow-md">
+            </div>
+            <div class="mt-3 w-full p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-[11px]">
+              <span class="text-slate-500">Volume / Isi:</span>
+              <span id="detailVolume" class="font-extrabold text-slate-800">-</span>
+            </div>
+          </div>
+
+          <!-- Keterangan & Manfaat -->
+          <div class="sm:col-span-7 space-y-4">
+            <div>
+              <h3 id="detailTitle" class="text-lg sm:text-xl font-black text-slate-900 leading-snug">Nama Produk</h3>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span id="detailPrice" class="text-xl sm:text-2xl font-black text-bpRed-700">Rp 0</span>
+                <span class="text-[10px] text-slate-400 font-medium">Harga Resmi</span>
+              </div>
+            </div>
+
+            <!-- Izin BPOM -->
+            <div class="p-3 rounded-xl bg-blue-50 border border-blue-200 text-blue-900 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-blue-700 text-sm"></i>
+                <span class="font-bold">Izin Registrasi BPOM RI:</span>
+              </div>
+              <span id="detailBpom" class="font-mono font-black text-blue-800">-</span>
+            </div>
+
+            <!-- Deskripsi -->
+            <div class="space-y-1.5">
+              <h4 class="font-black text-xs uppercase tracking-wider text-slate-500">Uraian & Khasiat:</h4>
+              <p id="detailDesc" class="text-slate-600 text-xs sm:text-sm leading-relaxed"></p>
+            </div>
+
+            <!-- Khasiat List -->
+            <div class="space-y-1.5">
+              <h4 class="font-black text-xs uppercase tracking-wider text-slate-500">Manfaat Utama:</h4>
+              <ul id="detailBenefitsList" class="space-y-1 text-xs text-slate-600">
+                <!-- Injected via JS -->
+              </ul>
+            </div>
+
+            <!-- Aturan Pakai -->
+            <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/80 space-y-1 text-xs">
+              <p class="font-bold text-amber-950 flex items-center gap-1.5">
+                <i class="fa-solid fa-mortar-pestle text-amber-700"></i> Aturan Konsumsi / Pakai:
+              </p>
+              <p id="detailUsage" class="text-slate-700 leading-relaxed"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Modal Footer (Actions) -->
+      <div class="p-4 sm:p-5 border-t border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+        <!-- Qty selector -->
+        <div class="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-start">
+          <span class="text-xs font-bold text-slate-600">Kuantitas:</span>
+          <div class="flex items-center border border-slate-300 rounded-xl bg-white overflow-hidden">
+            <button onclick="changeDetailQty(-1)" class="w-8 h-8 flex items-center justify-center font-bold text-slate-600 hover:bg-slate-100">-</button>
+            <input type="number" id="detailQtyInput" value="1" min="1" max="99" class="w-10 text-center text-xs font-bold text-slate-800 focus:outline-none">
+            <button onclick="changeDetailQty(1)" class="w-8 h-8 flex items-center justify-center font-bold text-slate-600 hover:bg-slate-100">+</button>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <button onclick="addCurrentDetailToCart()" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl border border-bpRed-700 text-bpRed-700 hover:bg-red-50 text-xs font-bold transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-cart-plus"></i> Tambah Keranjang
+          </button>
+          <button onclick="buyCurrentDetailWA()" class="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white text-xs font-bold shadow-md transition-all flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Beli Sekarang
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 2: SLIDING CART DRAWER (KERANJANG BELANJA)
+  ==================================================================== -->
+  <div id="cartDrawerBackdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-200"></div>
+  <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-out">
+    
+    <!-- Drawer Header -->
+    <div class="p-4 sm:p-5 bg-slate-900 text-white flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-2.5">
+        <i class="fa-solid fa-cart-shopping text-amber-400"></i>
+        <h3 class="font-black text-sm">Keranjang Belanja</h3>
+        <span id="drawerBadgeCount" class="text-[10px] font-black px-2 py-0.5 rounded-full bg-bpRed-700 text-white">0</span>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+    </div>
+
+    <!-- Items List -->
+    <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 space-y-3">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="p-5 border-t border-slate-200 bg-slate-50 space-y-4 shrink-0">
+      <div class="space-y-1 text-xs">
+        <div class="flex justify-between text-slate-500">
+          <span>Subtotal:</span>
+          <span id="drawerSubtotal" class="font-bold text-slate-800">Rp 0</span>
+        </div>
+        <div class="flex justify-between text-sm font-black text-slate-900 pt-2 border-t border-slate-200">
+          <span>Total Bayar:</span>
+          <span id="drawerTotal" class="text-bpRed-700 text-base font-black">Rp 0</span>
+        </div>
+      </div>
+
+      <button id="openCheckoutBtn" onclick="openCheckoutModal()" disabled class="w-full py-3.5 rounded-2xl bg-bpRed-700 disabled:bg-slate-300 disabled:cursor-not-allowed hover:bg-bpRed-800 text-white font-extrabold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>Lanjutkan ke Checkout WhatsApp</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ====================================================================
+       MODAL 3: CHECKOUT MODAL FORMULIR PEMESANAN
+  ==================================================================== -->
+  <div id="checkoutModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-5 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden flex flex-col max-h-[92vh] animate-in fade-in zoom-in-95 duration-150">
+      
+      <div class="p-4 sm:p-5 bg-gradient-to-r from-emerald-800 to-emerald-950 text-white flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-emerald-300 text-lg"></i>
+          <div>
+            <h3 class="font-black text-sm">Checkout Pesanan WhatsApp</h3>
+            <p class="text-[10px] text-emerald-200">Data otomatis dirapikan untuk konfirmasi CS</p>
+          </div>
+        </div>
+        <button onclick="closeCheckoutModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <form id="orderForm" onsubmit="handleCheckoutSubmit(event)" class="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs">
+        
+        <!-- Honeypot Anti-Spam (Bot Trap) -->
+        <div class="hidden" aria-hidden="true">
+          <input type="text" id="honeypotWebsite" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex justify-between items-center text-xs">
+          <div>
+            <span class="text-slate-500 block text-[11px]">Total Tagihan Pesanan:</span>
+            <span id="checkoutModalTotal" class="font-black text-emerald-900 text-sm">Rp 0</span>
+          </div>
+          <span id="checkoutModalItemsCount" class="bg-emerald-200/80 text-emerald-950 px-2.5 py-1 rounded-lg font-extrabold text-[11px]">0 Item</span>
+        </div>
+
+        <div class="space-y-1">
+          <label for="orderName" class="font-bold text-slate-700">Nama Lengkap Pemesan <span class="text-red-500">*</span></label>
+          <input type="text" id="orderName" required placeholder="Contoh: Bapak Ahmad Fauzi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+        </div>
+
+        <div class="space-y-1">
+          <label for="orderPhone" class="font-bold text-slate-700">Nomor WhatsApp Aktif <span class="text-red-500">*</span></label>
+          <input type="tel" id="orderPhone" required placeholder="Contoh: 081234567890" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+          <p id="phoneError" class="text-[10px] text-red-500 hidden font-bold">Gunakan format nomor WhatsApp Indonesia yang valid (08xx atau 628xx).</p>
+        </div>
+
+        <div class="space-y-1">
+          <label for="orderAddress" class="font-bold text-slate-700">Alamat Lengkap & Kota Tujuan <span class="text-red-500">*</span></label>
+          <textarea id="orderAddress" rows="2" required placeholder="Nama Jalan, Nomor Rumah, RT/RW, Kecamatan, Kota, Kode Pos" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600"></textarea>
+        </div>
+
+        <div class="space-y-1">
+          <label for="orderNotes" class="font-bold text-slate-700">Catatan Khusus (Opsional)</label>
+          <input type="text" id="orderNotes" placeholder="Misal: Paket Family campur 2 BP Dewasa + 1 Steffi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+        </div>
+
+        <div class="pt-2 border-t border-slate-200 flex items-center justify-end gap-2">
+          <button type="button" onclick="closeCheckoutModal()" class="px-4 py-2.5 rounded-xl text-slate-600 font-bold hover:bg-slate-100">Batal</button>
+          <button type="submit" id="submitOrderBtn" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold shadow-md transition-all flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Kirim Pesanan ke WhatsApp
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 4: LOGIN / OTENTIKASI ADMIN (DILENGKAPI ANTI-BRUTE FORCE)
+  ==================================================================== -->
+  <div id="adminLoginModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-150">
+      
+      <div class="p-5 bg-gradient-to-r from-slate-950 to-slate-900 text-white flex justify-between items-center">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-bpRed-700 text-white flex items-center justify-center">
+            <i class="fa-solid fa-user-shield text-sm"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-sm leading-tight">Admin Portal BPCareU</h3>
+            <p class="text-[10px] text-slate-400">Akses Database Katalog Google Sheets</p>
+          </div>
+        </div>
+        <button onclick="closeAdminLoginModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300 hover:text-white">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <form id="adminLoginForm" onsubmit="handleAdminLogin(event)" class="p-6 space-y-4 text-xs">
+        <div class="space-y-1.5">
+          <label for="adminApiKeyInput" class="font-bold text-slate-700 flex items-center justify-between">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-key text-amber-500"></i> Password / Secret API Key</span>
+            <span class="text-[10px] text-bpRed-700 font-mono font-semibold">Default: PROPOLIS_SECRET_ADMIN_KEY_2026</span>
+          </label>
+          <div class="relative">
+            <input type="password" id="adminApiKeyInput" required placeholder="Masukkan password admin..." class="w-full px-3.5 py-2.5 pr-10 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 font-mono">
+            <button type="button" onclick="togglePasswordVisibility('adminApiKeyInput', 'loginEyeIcon')" class="absolute right-3 top-2.5 text-slate-400 hover:text-slate-700">
+              <i id="loginEyeIcon" class="fa-regular fa-eye text-xs"></i>
+            </button>
+          </div>
+          <div class="flex items-center justify-between text-[10px] text-slate-500 pt-0.5">
+            <span>Sistem proteksi: Max 5 percobaan.</span>
+            <span id="loginAttemptsBadge" class="font-bold text-slate-700">Sisa percobaan: 5</span>
+          </div>
+        </div>
+
+        <!-- Pesan Error / Status Lockout Brute Force -->
+        <div id="loginErrorMsg" class="hidden p-3 rounded-xl bg-red-50 text-red-700 border border-red-200 text-xs space-y-1">
+          <div class="flex items-center gap-2 font-bold">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span id="loginErrorTitle">Password tidak sesuai!</span>
+          </div>
+          <p id="loginErrorDetail" class="text-[11px] leading-relaxed text-red-600">Periksa kembali password atau kunci API Anda.</p>
+        </div>
+
+        <!-- Banner Hitung Mundur Saat Akun Terkunci -->
+        <div id="loginLockoutBanner" class="hidden p-3.5 rounded-2xl bg-amber-50 border border-amber-300 text-amber-950 text-xs space-y-1.5 animate-pulse">
+          <div class="flex items-center gap-2 font-extrabold text-amber-900">
+            <i class="fa-solid fa-shield-virus text-base text-amber-600"></i>
+            <span>Akses Dibekukan Sementara</span>
+          </div>
+          <p class="text-[11px] leading-tight">Terlalu banyak percobaan gagal. Akses login dikunci selama:</p>
+          <div class="font-mono font-black text-sm text-bpRed-700" id="loginLockoutTimer">60 detik</div>
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2">
+          <button type="button" onclick="closeAdminLoginModal()" class="px-4 py-2 rounded-xl text-slate-600 font-bold hover:bg-slate-100">Batal</button>
+          <button type="submit" id="adminLoginSubmitBtn" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-black disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-bold shadow-md transition-all flex items-center gap-2">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> <span id="adminLoginBtnText">Masuk Dashboard</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 5: DASHBOARD ADMIN UTAMA (CRUD, DATABASE & GANTI PASSWORD)
+  ==================================================================== -->
+  <div id="adminDashboardModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-6xl shadow-2xl overflow-hidden flex flex-col max-h-[95vh] border border-slate-200">
+      
+      <!-- Top Navigation Bar -->
+      <div class="p-4 sm:p-5 bg-slate-950 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-bpRed-700 flex items-center justify-center font-black text-amber-300 text-base">BP</div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h2 class="font-black text-base text-white">Dashboard Admin BPCareU</h2>
+              <span id="dbStatusBadge" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Mode Internal
+              </span>
+            </div>
+            <p class="text-xs text-slate-400">Manajemen Katalog Produk & Keamanan Portal Terpadu</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="syncProductsFromSheets(true)" id="refreshSyncBtn" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-bold transition-all flex items-center gap-1.5 border border-slate-700">
+            <i class="fa-solid fa-rotate text-xs"></i>
+            <span>Sinkronkan Sheets</span>
+          </button>
+          <button onclick="closeAdminDashboard()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-red-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Tutup Dashboard">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dashboard Tabs & Actions Header -->
+      <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 shrink-0">
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="switchAdminTab('products')" id="tabBtnProducts" class="px-4 py-2 rounded-xl text-xs font-black bg-white border border-slate-200 text-slate-900 shadow-2xs flex items-center gap-2">
+            <i class="fa-solid fa-boxes-stacked text-bpRed-700"></i> Katalog Produk (<span id="adminProductCount">0</span>)
+          </button>
+          <button onclick="switchAdminTab('security')" id="tabBtnSecurity" class="px-4 py-2 rounded-xl text-xs font-black text-slate-600 hover:bg-slate-200 transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-shield-halved text-bpRed-700"></i> Keamanan & Ganti Password
+          </button>
+          <button onclick="switchAdminTab('config')" id="tabBtnConfig" class="px-4 py-2 rounded-xl text-xs font-black text-slate-600 hover:bg-slate-200 transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-sliders text-slate-600"></i> Konfigurasi Google Sheets
+          </button>
+        </div>
+
+        <div id="productTabActions" class="flex items-center gap-2">
+          <button onclick="openProductForm('create')" class="px-4 py-2 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white text-xs font-bold shadow-xs transition-all flex items-center gap-1.5">
+            <i class="fa-solid fa-plus text-xs"></i> Tambah Produk Baru
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 1: PRODUCT LIST & CRUD TABLE -->
+      <div id="adminTabContentProducts" class="flex-1 overflow-y-auto p-4 sm:p-6">
+        <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-2xs bg-white">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-slate-100/90 text-slate-700 font-black border-b border-slate-200 uppercase tracking-wider text-[11px]">
+                  <th class="py-3 px-4">Produk</th>
+                  <th class="py-3 px-4">Kategori & Volume</th>
+                  <th class="py-3 px-4">Nomor BPOM</th>
+                  <th class="py-3 px-4 text-right">Harga Resmi</th>
+                  <th class="py-3 px-4 text-center">Status</th>
+                  <th class="py-3 px-4 text-center">Aksi CRUD</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductTableBody" class="divide-y divide-slate-100 font-medium">
+                <!-- Injected via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: KEAMANAN & GANTI PASSWORD ADMIN -->
+      <div id="adminTabContentSecurity" class="flex-1 overflow-y-auto p-4 sm:p-6 hidden space-y-6">
+        <div class="max-w-4xl space-y-6 text-xs">
+          
+          <!-- Banner Informasi Status Keamanan -->
+          <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3 text-amber-950">
+            <div class="w-8 h-8 rounded-xl bg-amber-200 flex items-center justify-center text-amber-900 shrink-0">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <div class="space-y-1">
+              <h4 class="font-extrabold text-sm">Pembaruan Password Akses Admin</h4>
+              <p class="leading-relaxed text-amber-900">
+                Password admin berfungsi sebagai <strong>Secret API Key</strong> untuk mengamankan operasi CRUD produk dan integrasi Google Apps Script. Pastikan password baru mudah diingat oleh Anda atau tim pengelola toko.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- Form Ganti Password -->
+            <div class="lg:col-span-5 bg-white p-5 rounded-2xl border border-slate-200 space-y-4 shadow-2xs">
+              <div class="flex items-center gap-2 border-b border-slate-100 pb-3">
+                <i class="fa-solid fa-lock text-bpRed-700"></i>
+                <h4 class="font-black text-sm text-slate-900">Formulir Ubah Password</h4>
+              </div>
+
+              <form id="changePasswordForm" onsubmit="handleChangePassword(event)" class="space-y-3.5">
+                <div class="space-y-1">
+                  <label for="currentAdminPass" class="font-bold text-slate-700">Password Saat Ini <span class="text-red-500">*</span></label>
+                  <div class="relative">
+                    <input type="password" id="currentAdminPass" required placeholder="Masukkan password aktif" class="w-full px-3 py-2 pr-9 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono">
+                    <button type="button" onclick="togglePasswordVisibility('currentAdminPass', 'curPassEye')" class="absolute right-2.5 top-2 text-slate-400 hover:text-slate-700">
+                      <i id="curPassEye" class="fa-regular fa-eye text-xs"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="space-y-1">
+                  <label for="newAdminPass" class="font-bold text-slate-700">Password Baru <span class="text-red-500">*</span></label>
+                  <div class="relative">
+                    <input type="password" id="newAdminPass" required placeholder="Minimal 6 karakter" minlength="6" class="w-full px-3 py-2 pr-9 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono">
+                    <button type="button" onclick="togglePasswordVisibility('newAdminPass', 'newPassEye')" class="absolute right-2.5 top-2 text-slate-400 hover:text-slate-700">
+                      <i id="newPassEye" class="fa-regular fa-eye text-xs"></i>
+                    </button>
+                  </div>
+                  <p class="text-[10px] text-slate-400">Gunakan kombinasi huruf & angka untuk keamanan lebih baik.</p>
+                </div>
+
+                <div class="space-y-1">
+                  <label for="confirmNewAdminPass" class="font-bold text-slate-700">Konfirmasi Password Baru <span class="text-red-500">*</span></label>
+                  <div class="relative">
+                    <input type="password" id="confirmNewAdminPass" required placeholder="Ulangi password baru" minlength="6" class="w-full px-3 py-2 pr-9 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono">
+                    <button type="button" onclick="togglePasswordVisibility('confirmNewAdminPass', 'confirmPassEye')" class="absolute right-2.5 top-2 text-slate-400 hover:text-slate-700">
+                      <i id="confirmPassEye" class="fa-regular fa-eye text-xs"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div id="changePassError" class="hidden p-2.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold"></div>
+                <div id="changePassSuccess" class="hidden p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold"></div>
+
+                <div class="pt-2">
+                  <button type="submit" id="savePasswordBtn" class="w-full py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-extrabold shadow-sm transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-floppy-disk"></i> Simpan Password Baru
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Tabel Kredensial & Status Akses -->
+            <div class="lg:col-span-7 space-y-4">
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-table-list text-bpRed-700"></i>
+                    <h4 class="font-black text-sm text-slate-900">Tabel Informasi Kredensial Admin</h4>
+                  </div>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    Sesi Terautentikasi
+                  </span>
+                </div>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                      <tr class="bg-slate-50 text-slate-600 font-black border-b border-slate-200 uppercase tracking-wider text-[10px]">
+                        <th class="py-2.5 px-3">Role / Peran</th>
+                        <th class="py-2.5 px-3">Status Kunci</th>
+                        <th class="py-2.5 px-3">Kunci Akses Aktif</th>
+                        <th class="py-2.5 px-3">Terakhir Diperbarui</th>
+                      </tr>
+                    </thead>
+                    <tbody id="credentialTableBody" class="divide-y divide-slate-100">
+                      <!-- Diisi via JavaScript -->
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Status Proteksi Anti-Brute Force -->
+                <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 space-y-2 text-[11px] text-slate-600">
+                  <div class="flex items-center justify-between font-bold text-slate-800">
+                    <span class="flex items-center gap-1.5 text-emerald-700">
+                      <i class="fa-solid fa-shield-halved"></i> Proteksi Anti-Brute Force Aktif
+                    </span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px]">Aktif (Max 5x)</span>
+                  </div>
+                  <p class="leading-relaxed">
+                    Setiap percobaan login yang gagal dicatat dan dibatasi maksimal 5 kali berturut-turut. Jika terlampaui, IP/browser dibekukan selama 60 detik secara otomatis untuk menangkal serangan penebakan kata sandi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 3: GOOGLE APPS SCRIPT DATABASE CONFIG -->
+      <div id="adminTabContentConfig" class="flex-1 overflow-y-auto p-4 sm:p-6 hidden space-y-6">
+        <div class="max-w-3xl space-y-4 text-xs">
+          <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-4 text-blue-950 space-y-2">
+            <div class="flex items-center gap-2 font-bold text-sm">
+              <i class="fa-solid fa-circle-info text-blue-600"></i>
+              <span>Petunjuk Menghubungkan Google Sheets via Apps Script</span>
+            </div>
+            <p class="leading-relaxed text-slate-600">
+              Database backend menggunakan file <code>google_apps_script_backend.js</code>. Masukkan URL Web App hasil deploy Anda agar seluruh operasi CRUD tersimpan otomatis ke lembar spreadsheet Anda.
+            </p>
+          </div>
+
+          <form id="gasConfigForm" onsubmit="saveDatabaseConfig(event)" class="bg-white p-5 rounded-2xl border border-slate-200 space-y-4 shadow-2xs">
+            <div class="space-y-1.5">
+              <label for="configWebAppUrl" class="font-bold text-slate-700 flex items-center gap-1.5">
+                <i class="fa-solid fa-link text-emerald-600"></i> Google Apps Script Web App URL:
+              </label>
+              <input type="url" id="configWebAppUrl" placeholder="https://script.google.com/macros/s/AKfycb.../exec" class="w-full font-mono px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+              <span class="text-[10px] text-slate-500">Pastikan URL berakhiran <code>/exec</code> saat deploy sebagai Web App.</span>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="configApiKey" class="font-bold text-slate-700 flex items-center gap-1.5">
+                <i class="fa-solid fa-shield-halved text-amber-500"></i> Admin Secret API Key:
+              </label>
+              <input type="text" id="configApiKey" placeholder="PROPOLIS_SECRET_ADMIN_KEY_2026" class="w-full font-mono px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+              <span class="text-[10px] text-slate-500">Harus sama dengan konstanta <code>CONFIG.ADMIN_API_KEY</code> di Google Apps Script.</span>
+            </div>
+
+            <div class="pt-2 flex items-center gap-3">
+              <button type="submit" class="px-5 py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-bold shadow-md transition-all flex items-center gap-2">
+                <i class="fa-solid fa-floppy-disk"></i> Simpan Konfigurasi
+              </button>
+              <button type="button" onclick="testDatabaseConnection()" class="px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold transition-all flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-amber-500"></i> Uji Koneksi Database
+              </button>
+            </div>
+          </form>
+
+          <div id="connectionStatusResult" class="hidden p-4 rounded-2xl border text-xs"></div>
+        </div>
+      </div>
+
+      <!-- Dashboard Footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-database text-slate-400"></i>
+          <span>Database Serverless Google Sheets • BPCareU Admin v2.1</span>
+        </span>
+        <button onclick="logoutAdmin()" class="text-red-600 hover:text-red-700 font-bold flex items-center gap-1.5">
+          <i class="fa-solid fa-right-from-bracket"></i> Keluar Sesi Admin
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 6: FORM CREATE / EDIT PRODUK
+  ==================================================================== -->
+  <div id="productFormModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-2xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      
+      <div class="p-4 sm:p-5 bg-gradient-to-r from-bpRed-800 to-red-700 text-white flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-pen-to-square text-amber-300"></i>
+          <h3 id="productFormTitle" class="font-black text-sm sm:text-base">Tambah Produk Baru</h3>
+        </div>
+        <button onclick="closeProductFormModal()" class="w-8 h-8 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center text-white">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <form id="productCrudForm" onsubmit="handleProductFormSubmit(event)" class="p-5 sm:p-6 overflow-y-auto space-y-4 text-xs">
+        <input type="hidden" id="formMode" value="create">
+        <input type="hidden" id="formOriginalId" value="">
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="space-y-1">
+            <label for="formProdId" class="font-bold text-slate-700">ID Unik Produk (Slug) <span class="text-red-500">*</span></label>
+            <input type="text" id="formProdId" required placeholder="Contoh: bp-reguler" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono">
+          </div>
+          <div class="space-y-1">
+            <label for="formProdCategory" class="font-bold text-slate-700">Kategori <span class="text-red-500">*</span></label>
+            <select id="formProdCategory" required class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+              <option value="propolis">Propolis</option>
+              <option value="stevia">Stevia</option>
+              <option value="specialty">Brassic & Norway (Specialty)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="space-y-1">
+          <label for="formProdName" class="font-bold text-slate-700">Nama Lengkap Produk <span class="text-red-500">*</span></label>
+          <input type="text" id="formProdName" required placeholder="Contoh: British Propolis Regular (Dewasa)" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-semibold">
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-3">
+          <div class="space-y-1">
+            <label for="formProdPrice" class="font-bold text-slate-700">Harga Resmi (Rp) <span class="text-red-500">*</span></label>
+            <input type="number" id="formProdPrice" required placeholder="265000" min="1000" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+          </div>
+          <div class="space-y-1">
+            <label for="formProdVolume" class="font-bold text-slate-700">Volume / Isi <span class="text-red-500">*</span></label>
+            <input type="text" id="formProdVolume" required placeholder="6 ml (±120 tetes)" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+          </div>
+          <div class="space-y-1">
+            <label for="formProdBpom" class="font-bold text-slate-700">Nomor BPOM RI <span class="text-red-500">*</span></label>
+            <input type="text" id="formProdBpom" required placeholder="POM TR 183610771" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono">
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="space-y-1">
+            <label for="formProdBadge" class="font-bold text-slate-700">Badge / Tag Promo</label>
+            <input type="text" id="formProdBadge" placeholder="Best Seller / Favorit" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+          </div>
+          <div class="space-y-1">
+            <label for="formProdStatus" class="font-bold text-slate-700">Status Produk</label>
+            <select id="formProdStatus" class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+              <option value="active">Active (Tampil di Landing Page)</option>
+              <option value="archived">Archived (Disembunyikan)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="space-y-1">
+          <label for="formProdImage" class="font-bold text-slate-700">URL Foto Produk</label>
+          <input type="url" id="formProdImage" placeholder="https://..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600">
+          <span class="text-[10px] text-slate-400">Gunakan tautan gambar publik online atau biarkan kosong untuk fallback bawaan.</span>
+        </div>
+
+        <div class="space-y-1">
+          <label for="formProdShortDesc" class="font-bold text-slate-700">Deskripsi Singkat (Kartu Katalog)</label>
+          <textarea id="formProdShortDesc" rows="2" placeholder="Deskripsi ringkas yang tampil pada kartu katalog..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600"></textarea>
+        </div>
+
+        <div class="space-y-1">
+          <label for="formProdDesc" class="font-bold text-slate-700">Deskripsi Lengkap (Modal Detail)</label>
+          <textarea id="formProdDesc" rows="3" placeholder="Uraian manfaat dan keunggulan lengkap..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600"></textarea>
+        </div>
+
+        <div class="space-y-1">
+          <label for="formProdUsage" class="font-bold text-slate-700">Aturan Pakai</label>
+          <textarea id="formProdUsage" rows="2" placeholder="Petunjuk dosis & cara konsumsi..." class="w-full px-3 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600"></textarea>
+        </div>
+
+        <div class="pt-3 border-t border-slate-200 flex justify-end gap-2 shrink-0">
+          <button type="button" onclick="closeProductFormModal()" class="px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-bold hover:bg-slate-100">Batal</button>
+          <button type="submit" id="saveProductBtn" class="px-6 py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-bold shadow-md transition-all flex items-center gap-2">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Simpan ke Database
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL 7: KONFIRMASI HAPUS PRODUK (BEBAS ALERT/CONFIRM)
+  ==================================================================== -->
+  <div id="deleteConfirmModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl w-full max-w-sm shadow-2xl p-6 text-center space-y-4">
+      <div class="w-14 h-14 rounded-full bg-red-100 text-red-700 mx-auto flex items-center justify-center text-2xl">
+        <i class="fa-solid fa-trash-can"></i>
+      </div>
+      <div>
+        <h4 class="font-black text-base text-slate-900">Arsipkan Produk Ini?</h4>
+        <p id="deleteTargetName" class="text-xs text-slate-600 mt-1 font-semibold"></p>
+        <p class="text-[11px] text-slate-400 mt-1">Status produk akan diubah menjadi 'archived' dari katalog Google Sheets.</p>
+      </div>
+      <div class="flex items-center justify-center gap-2 pt-2">
+        <button onclick="closeDeleteConfirmModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 text-xs font-bold hover:bg-slate-100">Batal</button>
+        <button onclick="executeProductDeletion()" id="confirmDeleteBtn" class="px-5 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-md transition-all">
+          Ya, Arsipkan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER NOTIFIKASI -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ====================================================================
+       LOGIKA JAVASCRIPT LENGKAP & INTEGRASI DATABASE GOOGLE APPS SCRIPT
+  ==================================================================== -->
+  <script>
+    // Konfigurasi WhatsApp Admin Toko BPCareU (Awali dengan kode negara 62)
+    const ADMIN_WA_NUMBER = "6281288889999";
+
+    // Konfigurasi Proteksi Anti-Brute Force Login Admin
+    const BRUTE_FORCE_CONFIG = {
+      maxAttempts: 5,               // Maksimal percobaan salah sebelum dibekukan
+      lockoutDurationSeconds: 60,   // Durasi pembekuan (60 detik)
+      storageKey: 'bpcareu_admin_security_state'
+    };
+
+    let lockoutIntervalId = null;
+
+    // Variabel Database Google Apps Script & Kredensial Admin
+    let GOOGLE_APPS_SCRIPT_URL = "";
+    let ADMIN_API_KEY = "PROPOLIS_SECRET_ADMIN_KEY_2026";
+    let lastPasswordUpdate = "2026-09-01 10:00:00";
+    let isAdminAuthenticated = false;
+    let pendingDeleteProductId = null;
+
+    // Database Resmi 6 Paket BP Group Sesuai Gambar Referensi Resmi 2026
+    const PACKAGES = [
+      { id: 'pkg-satuan', name: 'Satuan', qty: 1, unitPrice: 265000, totalPrice: 265000, tag: 'Eceran Resmi', desc: '1 Pcs Produk Resmi Bebas Pilih' },
+      { id: 'pkg-family', name: 'Family', qty: 3, unitPrice: 240000, totalPrice: 720000, tag: 'Hemat Rp 75.000', desc: '3 Pcs Bebas Campur Varian BP Group' },
+      { id: 'pkg-agent', name: 'Agent', qty: 5, unitPrice: 225000, totalPrice: 1125000, tag: 'Paket Usaha Pemula', desc: '5 Pcs untuk Mulai Kemitraan Reseller' },
+      { id: 'pkg-ap', name: 'Agent Plus (AP)', qty: 10, unitPrice: 210000, totalPrice: 2100000, tag: 'Paling Populer', desc: '10 Pcs Margin Keuntungan Lebih Tinggi' },
+      { id: 'pkg-sap', name: 'Special Agent Plus (SAP)', qty: 40, unitPrice: 195000, totalPrice: 7800000, tag: 'Grosir Agen Wilayah', desc: '40 Pcs Modal Lebih Hemat & Cepat Balik Modal' },
+      { id: 'pkg-se', name: 'Special Entrepreneur (SE)', qty: 200, unitPrice: 175000, totalPrice: 35000000, tag: 'Distributor VIP', desc: '200 Pcs Skala Distributor Terbesar' }
+    ];
+
+    // Database Produk Resmi BP Group
+    const INITIAL_PRODUCTS = [
+      {
+        id: 'bp-reguler',
+        name: 'British Propolis Regular (Dewasa)',
+        category: 'propolis',
+        badge: 'Best Seller',
+        price: 265000,
+        volume: '6 ml (±120 tetes)',
+        bpom: 'POM TR 183610771',
+        status: 'active',
+        image: 'https://down-id.img.susercontent.com/file/id-11134207-81ztm-mq6i019inpqab5.webp',
+        shortDesc: 'Konsentrat bioflavonoid 4x lebih tinggi untuk imunitas, stamina, kolesterol, dan diabetes.',
+        description: 'Diformulasikan khusus untuk usia di atas 12 tahun dan dewasa. Mengandung bioflavonoid murni dari lebah Inggris pilihan yang diproses dengan teknologi mutakhir. Berkhasiat membantu pemulihan luka, memperkuat sistem kekebalan tubuh, menurunkan kadar asam urat serta menstabilkan gula darah.',
+        benefits: [
+          'Mempercepat regenerasi sel dan pemulihan stamina',
+          'Membantu meredakan nyeri asam urat, kolesterol & maag',
+          'Tingkat bioflavonoid 4x lebih pekat dibanding propolis biasa',
+          '100% Halal MUI & Bebas Alkohol'
+        ],
+        usage: 'Teteskan 4-6 tetes ke dalam 1/3 gelas air hangat kuku. Aduk merata menggunakan sendok non-logam. Minum 2 kali sehari saat perut kosong.'
+      },
+      {
+        id: 'bp-green',
+        name: 'British Propolis Green Kids',
+        category: 'propolis',
+        badge: 'Favorit Ibu & Anak',
+        price: 265000,
+        volume: '6 ml (±120 tetes)',
+        bpom: 'POM TR 193631981',
+        status: 'active',
+        image: 'https://down-id.img.susercontent.com/file/id-11134207-81ztj-mq4i4nywrlzj63.webp',
+        shortDesc: 'Diformulasikan khusus untuk anak 1-12 tahun, mendukung kecerdasan, nafsu makan & daya tahan tubuh.',
+        description: 'Kaya akan vitamin, mineral dan bioflavonoid alami yang diracik khusus agar lembut dan nyaman di lambung anak. Membantu mempercepat masa pemulihan saat demam, batuk pilek, meningkatkan nafsu makan, serta menunjang konsentrasi belajar anak.',
+        benefits: [
+          'Meningkatkan daya tahan tubuh anak dari flu & batuk',
+          'Membantu meningkatkan nafsu makan anak secara alami',
+          'Menunjang konsentrasi dan kecerdasan daya ingat otak',
+          'Rasa yang ramah dan mudah diterima anak'
+        ],
+        usage: 'Teteskan 2-3 tetes ke dalam air hangat atau campur dengan madu/jus buah kesukaan anak. Minum 1-2 kali sehari.'
+      },
+      {
+        id: 'bp-steffi',
+        name: 'Steffi Pro Natural Sweetener',
+        category: 'stevia',
+        badge: '0 Kalori Bebas Gula',
+        price: 265000,
+        volume: '30 ml (±350 tetes)',
+        bpom: 'P-IRT / Halal MUI',
+        status: 'active',
+        image: 'https://down-id.img.susercontent.com/file/id-11134207-7r98o-lz49xldzcsf2bf.webp',
+        shortDesc: 'Pemanis alami ekstrak daun Stevia 0 Kalori. Pengganti gula pasir aman bagi penderita diabetes.',
+        description: 'Pemanis alami tetes dari daun Stevia Rebaudiana bermutu tinggi. Memiliki Indeks Glikemik 0 (Zero Glycemic Index) sehingga tidak memicu lonjakan kadar gula darah. Sangat cocok bagi penderita diabetes, pelaku diet Keto/rendah kalori, dan pencegahan obesitas tanpa aftertaste pahit.',
+        benefits: [
+          '0 Kalori & 0 Karbohidrat, ramah gula darah',
+          '1-2 tetes setara dengan manis 2 sendok teh gula pasir',
+          'Bebas rasa getir/pahit di lidah',
+          'Praktis untuk teh, kopi, jus, oatmeal, dan aneka masakan'
+        ],
+        usage: 'Teteskan 1-2 tetes ke dalam 200 ml minuman atau masakan favorit Anda.'
+      },
+      {
+        id: 'bp-brassic-eye',
+        name: 'Brassic Eye (Nutrisi Mata & Retina)',
+        category: 'specialty',
+        badge: 'Herbal Mata Lelah',
+        price: 265000,
+        volume: 'Botol Kapsul',
+        bpom: 'POM TR 203342551',
+        status: 'active',
+        image: 'https://down-id.img.susercontent.com/file/id-11134207-7rasg-m4exo7b1yyjy83.webp',
+        shortDesc: 'Ekstrak Bilberry & Cynara scolymus untuk memelihara kesehatan mata dari radiasi gadget.',
+        description: 'Herbal spesial BP Group yang diformulasikan khusus dengan ekstrak Bilberry dan bahan alami terpilih. Berkhasiat melindungi saraf mata, meringankan keluhan mata minus/plus, mata lelah akibat paparan layar gawai (komputer/HP), serta mencegah katarak dini.',
+        benefits: [
+          'Meringankan mata lelah, kering, dan perih akibat radiasi monitor',
+          'Membantu menutrisi retina dan mempertajam penglihatan',
+          'Mengandung antioksidan antosianin bilberry konsentrasi tinggi',
+          'Izin edar resmi terdaftar di BPOM RI'
+        ],
+        usage: 'Diminum 2 kali sehari sebanyak 1-2 kapsul setelah makan.'
+      },
+      {
+        id: 'bp-brassic-pro',
+        name: 'Brassic Pro (Sendi, Otot & Pegal)',
+        category: 'specialty',
+        badge: 'Solusi Sendi Sehat',
+        price: 265000,
+        volume: 'Botol Kapsul',
+        bpom: 'POM TR 203342371',
+        status: 'active',
+        image: 'https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m659aluqkjra13.webp',
+        shortDesc: 'Formulasi herbal sinergis untuk meredakan nyeri persendian, asam urat, pinggang dan rematik.',
+        description: 'Kombinasi herbal antiinflamasi alami yang berkhasiat membantu melumasi persendian, meredakan nyeri linu, kaku sendi, radang tulang, dan kebas pada kaki/tangan. Sangat disarankan bagi usia produktif maupun lansia aktif.',
+        benefits: [
+          'Meredakan radang sendi, sakit lutut, dan nyeri pinggang',
+          'Membantu menurunkan penumpukan kristal asam urat',
+          'Melancarkan peredaran darah di area otot dan persendian',
+          'Aman di lambung dengan pengawasan mutu ketat'
+        ],
+        usage: 'Diminum 2 kali sehari sebanyak 1-2 kapsul secara teratur setelah makan.'
+      },
+      {
+        id: 'bp-norway',
+        name: 'BP Norway (Pure Salmon Fish Oil)',
+        category: 'specialty',
+        badge: 'Omega-3 Atlantik',
+        price: 265000,
+        volume: 'Botol Softgel',
+        bpom: 'POM SI / Halal',
+        status: 'active',
+        image: 'https://down-id.img.susercontent.com/file/id-11134207-7r98x-lxh95xhhpfv1e6.webp',
+        shortDesc: 'Minyak ikan salmon murni perairan dingin Norwegia kaya EPA, DHA & Astaxanthin alami.',
+        description: 'Minyak ikan bermutu tinggi dari perairan dingin Atlantik Utara Norwegia. Kaya akan asam lemak esensial Omega-3, EPA, dan DHA yang sangat penting untuk kesehatan jantung, pembuluh darah, fungsi memori otak, serta menjaga elastisitas kulit.',
+        benefits: [
+          'Menjaga elastisitas pembuluh darah & kesehatan jantung',
+          'Membantu menstabilkan profil lemak darah (trigliserida)',
+          'Menutrisi sel otak dan memelihara konsentrasi',
+          'Diekstraksi higienis dengan standar internasional'
+        ],
+        usage: 'Diminum 1-2 softgel per hari setelah makan.'
+      }
+    ];
+
+    // State Runtime Produk & Keranjang Belanja
+    let runtimeProducts = [...INITIAL_PRODUCTS];
+    let cart = [];
+    let activeDetailProduct = null;
+    let showSecretCredential = false;
+
+    // Utilitas Escaping String (Mencegah XSS)
+    function escapeHTML(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    // Toggle Tampilan Password Mata
+    function togglePasswordVisibility(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (!input || !icon) return;
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'fa-regular fa-eye-slash text-xs text-bpRed-700';
+      } else {
+        input.type = 'password';
+        icon.className = 'fa-regular fa-eye text-xs text-slate-400';
+      }
+    }
+
+    // Tampilkan Notifikasi Toast Mengambang
+    function showToast(message) {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = "bg-slate-900 text-white text-xs px-4 py-3 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2.5 transform translate-y-3 transition-all duration-300 pointer-events-auto";
+      toast.innerHTML = `
+        <i class="fa-solid fa-circle-check text-amber-400"></i>
+        <span class="font-medium">${escapeHTML(message)}</span>
+      `;
+      container.appendChild(toast);
+      setTimeout(() => toast.classList.remove('translate-y-3'), 10);
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-3');
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    // ========================================================================
+    // MODUL KEAMANAN ANTI-BRUTE FORCE LOGIN
+    // ========================================================================
+    function getSecurityState() {
+      try {
+        const data = localStorage.getItem(BRUTE_FORCE_CONFIG.storageKey);
+        if (data) {
+          return JSON.parse(data);
+        }
+      } catch (e) {}
+      return { failedAttempts: 0, lockedUntil: 0 };
+    }
+
+    function saveSecurityState(state) {
+      try {
+        localStorage.setItem(BRUTE_FORCE_CONFIG.storageKey, JSON.stringify(state));
+      } catch (e) {}
+    }
+
+    function resetSecurityState() {
+      if (lockoutIntervalId) {
+        clearInterval(lockoutIntervalId);
+        lockoutIntervalId = null;
+      }
+      try {
+        localStorage.removeItem(BRUTE_FORCE_CONFIG.storageKey);
+      } catch (e) {}
+      updateLoginAttemptsUI(0, false);
+    }
+
+    function checkLockoutStatus() {
+      const state = getSecurityState();
+      const now = Date.now();
+
+      if (state.lockedUntil && state.lockedUntil > now) {
+        startLockoutCountdown(state.lockedUntil);
+        return true;
+      } else if (state.lockedUntil && state.lockedUntil <= now) {
+        // Masa lockout telah kadaluarsa
+        resetSecurityState();
+      }
+      updateLoginAttemptsUI(state.failedAttempts || 0, false);
+      return false;
+    }
+
+    function startLockoutCountdown(lockedUntil) {
+      if (lockoutIntervalId) clearInterval(lockoutIntervalId);
+
+      const passInput = document.getElementById('adminApiKeyInput');
+      const submitBtn = document.getElementById('adminLoginSubmitBtn');
+      const banner = document.getElementById('loginLockoutBanner');
+      const timerText = document.getElementById('loginLockoutTimer');
+      const errorMsg = document.getElementById('loginErrorMsg');
+
+      passInput.disabled = true;
+      submitBtn.disabled = true;
+      banner.classList.remove('hidden');
+      errorMsg.classList.add('hidden');
+
+      const tick = () => {
+        const remainingMs = lockedUntil - Date.now();
+        if (remainingMs <= 0) {
+          clearInterval(lockoutIntervalId);
+          lockoutIntervalId = null;
+          passInput.disabled = false;
+          submitBtn.disabled = false;
+          banner.classList.add('hidden');
+          resetSecurityState();
+          showToast("Akses login telah dibuka kembali. Silakan coba lagi.");
+          return;
+        }
+
+        const remainingSec = Math.ceil(remainingMs / 1000);
+        timerText.textContent = `${remainingSec} detik tersisa`;
+        document.getElementById('adminLoginBtnText').textContent = `Terkunci (${remainingSec}s)`;
+      };
+
+      tick();
+      lockoutIntervalId = setInterval(tick, 1000);
+    }
+
+    function updateLoginAttemptsUI(failedAttempts, isLocked) {
+      const badge = document.getElementById('loginAttemptsBadge');
+      const passInput = document.getElementById('adminApiKeyInput');
+      const submitBtn = document.getElementById('adminLoginSubmitBtn');
+      const btnText = document.getElementById('adminLoginBtnText');
+
+      if (!badge) return;
+
+      const remaining = Math.max(0, BRUTE_FORCE_CONFIG.maxAttempts - failedAttempts);
+      badge.textContent = `Sisa percobaan: ${remaining}`;
+
+      if (failedAttempts > 0 && !isLocked) {
+        badge.className = "font-bold text-red-600";
+      } else {
+        badge.className = "font-bold text-slate-700";
+      }
+
+      if (!isLocked) {
+        passInput.disabled = false;
+        submitBtn.disabled = false;
+        btnText.textContent = "Masuk Dashboard";
+        document.getElementById('loginLockoutBanner').classList.add('hidden');
+      }
+    }
+
+    // ==========================================
+    // RENDER TABEL PAKET KEMITRAAN RESMI
+    // ==========================================
+    function renderPackagesTable() {
+      const tbody = document.getElementById('packageTableBody');
+      if (!tbody) return;
+
+      tbody.innerHTML = PACKAGES.map(pkg => `
+        <tr class="hover:bg-red-50/40 transition-colors">
+          <td class="py-4 px-4 sm:px-6">
+            <div class="flex items-center gap-2">
+              <span class="font-black text-slate-900 text-xs sm:text-sm uppercase tracking-wide">${escapeHTML(pkg.name)}</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-bpGold-400/20 text-amber-900 border border-amber-300">${escapeHTML(pkg.tag)}</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-0.5">${escapeHTML(pkg.desc)}</p>
+          </td>
+          <td class="py-4 px-4 sm:px-6 text-center font-bold text-slate-700">
+            ${pkg.qty} PCS <span class="text-xs text-slate-400 font-normal">(@Rp ${pkg.unitPrice.toLocaleString('id-ID')})</span>
+          </td>
+          <td class="py-4 px-4 sm:px-6 text-right font-black text-bpRed-700 text-sm sm:text-base">
+            Rp ${pkg.totalPrice.toLocaleString('id-ID')}
+          </td>
+          <td class="py-4 px-4 sm:px-6 text-center">
+            <button onclick="addPackageToCart('${pkg.id}')" class="px-3.5 py-1.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-extrabold text-xs shadow-xs transition-all flex items-center justify-center gap-1.5 mx-auto">
+              <i class="fa-solid fa-cart-plus text-[10px]"></i>
+              <span>Pilih Paket</span>
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // ==========================================
+    // RENDER KATALOG PRODUK RESMI
+    // ==========================================
+    function renderProductCatalog(filter = 'all') {
+      const grid = document.getElementById('productGrid');
+      if (!grid) return;
+
+      const activeProducts = runtimeProducts.filter(p => p.status !== 'archived');
+      const filtered = filter === 'all' ? activeProducts : activeProducts.filter(p => p.category === filter);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-400 text-xs">
+            Tidak ada produk yang ditemukan untuk kategori ini.
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <div onclick="openProductDetail('${p.id}')" class="bg-white rounded-3xl p-5 border border-slate-200 hover:border-bpRed-600 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer relative">
+          
+          <div>
+            <!-- Badge & Volume -->
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-bpRed-100 text-bpRed-800">
+                ${escapeHTML(p.badge || 'BP Group')}
+              </span>
+              <span class="text-[11px] font-semibold text-slate-400">
+                ${escapeHTML(p.volume || '-')}
+              </span>
+            </div>
+
+            <!-- Foto Produk -->
+            <div class="w-full h-48 rounded-2xl bg-gradient-to-tr from-slate-50 to-red-50/30 p-4 mb-4 flex items-center justify-center overflow-hidden border border-slate-100 group-hover:scale-[1.02] transition-transform">
+              <img src="${p.image}" alt="${escapeHTML(p.name)}" class="max-h-40 object-contain drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/400x400/991b1b/ffffff?text=${encodeURIComponent(p.id)}';">
+            </div>
+
+            <div class="flex items-center gap-1.5 text-[10px] text-blue-700 font-bold mb-1">
+              <i class="fa-solid fa-shield-halved text-[9px]"></i>
+              <span class="font-mono">${escapeHTML(p.bpom || '-')}</span>
+            </div>
+
+            <h3 class="font-black text-sm text-slate-900 group-hover:text-bpRed-700 transition-colors leading-snug line-clamp-1">
+              ${escapeHTML(p.name)}
+            </h3>
+
+            <p class="text-xs text-slate-500 line-clamp-2 mt-1 leading-relaxed">
+              ${escapeHTML(p.shortDesc || '')}
+            </p>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+            <div>
+              <span class="text-[10px] text-slate-400 block font-medium">Harga Resmi:</span>
+              <span class="text-base font-black text-bpRed-700">Rp ${Number(p.price || 0).toLocaleString('id-ID')}</span>
+            </div>
+            <div class="flex items-center gap-1.5" onclick="event.stopPropagation()">
+              <button onclick="openProductDetail('${p.id}')" class="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-bold transition-all" title="Detail Lengkap">
+                Detail
+              </button>
+              <button onclick="addProductToCart('${p.id}')" class="px-3 py-2 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white text-xs font-bold shadow-xs transition-all flex items-center gap-1">
+                <i class="fa-solid fa-plus text-[10px]"></i> Beli
+              </button>
+            </div>
+          </div>
+
+        </div>
+      `).join('');
+    }
+
+    function setProductFilter(cat, btn) {
+      document.querySelectorAll('.prod-filter-btn').forEach(b => {
+        b.className = "prod-filter-btn px-4 py-2 rounded-xl text-xs font-extrabold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200";
+      });
+      btn.className = "prod-filter-btn px-4 py-2 rounded-xl text-xs font-extrabold transition-all bg-bpRed-800 text-white shadow-sm";
+      renderProductCatalog(cat);
+    }
+
+    // ==========================================
+    // DETAIL MODAL PRODUK
+    // ==========================================
+    function openProductDetail(productId) {
+      const prod = runtimeProducts.find(p => p.id === productId);
+      if (!prod) return;
+
+      activeDetailProduct = prod;
+      document.getElementById('detailCategoryBadge').textContent = prod.category.toUpperCase();
+      document.getElementById('detailBadgeTag').textContent = prod.badge || 'BP Group Original';
+      document.getElementById('detailTitle').textContent = prod.name;
+      document.getElementById('detailPrice').textContent = `Rp ${Number(prod.price).toLocaleString('id-ID')}`;
+      document.getElementById('detailVolume').textContent = prod.volume || '-';
+      document.getElementById('detailBpom').textContent = prod.bpom || '-';
+      document.getElementById('detailDesc').textContent = prod.description || prod.shortDesc;
+      document.getElementById('detailUsage').textContent = prod.usage || 'Ikuti anjuran pemakaian pada label kemasan botol.';
+      document.getElementById('detailQtyInput').value = 1;
+
+      const imgEl = document.getElementById('detailImg');
+      imgEl.src = prod.image;
+      imgEl.onerror = () => { imgEl.src = `https://placehold.co/400x400/991b1b/ffffff?text=${encodeURIComponent(prod.id)}`; };
+
+      const benList = document.getElementById('detailBenefitsList');
+      const benefits = prod.benefits || [
+        'Formula herbal konsentrat tinggi berstandar internasional',
+        'Membantu mempercepat pemulihan dan memperkuat metabolisme tubuh',
+        'Terdaftar resmi di BPOM RI & Bersertifikat Halal MUI'
+      ];
+      benList.innerHTML = benefits.map(b => `
+        <li class="flex items-start gap-2">
+          <i class="fa-solid fa-circle-check text-emerald-600 mt-1 shrink-0 text-xs"></i>
+          <span>${escapeHTML(b)}</span>
+        </li>
+      `).join('');
+
+      const modal = document.getElementById('productDetailModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeProductDetailModal() {
+      const modal = document.getElementById('productDetailModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+      activeDetailProduct = null;
+    }
+
+    function changeDetailQty(delta) {
+      const input = document.getElementById('detailQtyInput');
+      let val = parseInt(input.value) || 1;
+      val = Math.max(1, Math.min(99, val + delta));
+      input.value = val;
+    }
+
+    function addCurrentDetailToCart() {
+      if (!activeDetailProduct) return;
+      const qty = parseInt(document.getElementById('detailQtyInput').value) || 1;
+      addToCartItem(activeDetailProduct.id, activeDetailProduct.name, activeDetailProduct.price, qty, 'product');
+      closeProductDetailModal();
+      showToast(`${activeDetailProduct.name} (${qty} pcs) ditambahkan ke keranjang!`);
+    }
+
+    function buyCurrentDetailWA() {
+      if (!activeDetailProduct) {
+        window.open(`https://wa.me/${ADMIN_WA_NUMBER}?text=Halo%20Admin%20BPCareU,%20saya%20ingin%20konsultasi%20produk%20BP%20Group.`, '_blank');
+        return;
+      }
+      const qty = parseInt(document.getElementById('detailQtyInput').value) || 1;
+      const total = activeDetailProduct.price * qty;
+      const text = `Halo Admin BPCareU, saya ingin memesan langsung:\n\n*Produk:* ${activeDetailProduct.name}\n*Jumlah:* ${qty} Pcs\n*Estimasi Harga:* Rp ${total.toLocaleString('id-ID')}\n\nMohon info ketersediaan stok & ongkir ke kota saya. Terima kasih!`;
+      window.open(`https://wa.me/${ADMIN_WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // ==========================================
+    // KERANJANG BELANJA (CART)
+    // ==========================================
+    function addProductToCart(productId) {
+      const prod = runtimeProducts.find(p => p.id === productId);
+      if (!prod) return;
+      addToCartItem(prod.id, prod.name, prod.price, 1, 'product');
+      showToast(`${prod.name} ditambahkan ke keranjang!`);
+    }
+
+    function addPackageToCart(packageId) {
+      const pkg = PACKAGES.find(p => p.id === packageId);
+      if (!pkg) return;
+      addToCartItem(pkg.id, `Paket Kemitraan: ${pkg.name} (${pkg.qty} Pcs)`, pkg.totalPrice, 1, 'package');
+      showToast(`Paket ${pkg.name} ditambahkan ke keranjang!`);
+      toggleCartDrawer(true);
+    }
+
+    function addToCartItem(id, name, price, qty, type) {
+      const exist = cart.find(item => item.id === id);
+      if (exist) {
+        exist.qty += qty;
+      } else {
+        cart.push({ id, name, price, qty, type });
+      }
+      saveAndRenderCart();
+    }
+
+    function updateCartItemQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== id);
+      }
+      saveAndRenderCart();
+    }
+
+    function removeCartItem(id) {
+      cart = cart.filter(i => i.id !== id);
+      saveAndRenderCart();
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+      if (open) {
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+        setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+      } else {
+        backdrop.classList.add('opacity-0');
+        drawer.classList.add('translate-x-full');
+        setTimeout(() => backdrop.classList.add('hidden'), 200);
+      }
+    }
+
+    function saveAndRenderCart() {
+      try {
+        localStorage.setItem('bpcareu_cart', JSON.stringify(cart));
+      } catch (e) {}
+
+      const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+      const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+
+      document.getElementById('cartCountBadge').textContent = totalItems;
+      document.getElementById('drawerBadgeCount').textContent = totalItems;
+      document.getElementById('drawerSubtotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+      document.getElementById('drawerTotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+
+      const checkoutBtn = document.getElementById('openCheckoutBtn');
+      checkoutBtn.disabled = cart.length === 0;
+
+      const list = document.getElementById('cartItemsList');
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div class="h-64 flex flex-col items-center justify-center text-center p-6 text-slate-400 space-y-3">
+            <i class="fa-solid fa-cart-shopping text-4xl text-slate-300"></i>
+            <p class="text-xs font-semibold">Keranjang belanja Anda masih kosong.</p>
+            <a href="#katalog" onclick="toggleCartDrawer(false)" class="text-xs font-bold text-bpRed-700 underline">Pilih Produk Sekarang</a>
+          </div>
+        `;
+        return;
+      }
+
+      list.innerHTML = cart.map(item => `
+        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/90 flex items-center justify-between gap-3 text-xs">
+          <div class="flex-1 min-w-0">
+            <p class="font-extrabold text-slate-900 truncate">${escapeHTML(item.name)}</p>
+            <span class="text-slate-500 font-bold">Rp ${Number(item.price).toLocaleString('id-ID')}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center border border-slate-300 rounded-lg bg-white overflow-hidden">
+              <button onclick="updateCartItemQty('${item.id}', -1)" class="w-6 h-6 flex items-center justify-center font-bold text-slate-600 hover:bg-slate-100">-</button>
+              <span class="w-7 text-center font-black text-xs text-slate-800">${item.qty}</span>
+              <button onclick="updateCartItemQty('${item.id}', 1)" class="w-6 h-6 flex items-center justify-center font-bold text-slate-600 hover:bg-slate-100">+</button>
+            </div>
+            <button onclick="removeCartItem('${item.id}')" class="text-red-500 hover:text-red-700 p-1" title="Hapus Item">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function initCart() {
+      try {
+        const stored = localStorage.getItem('bpcareu_cart');
+        if (stored) cart = JSON.parse(stored);
+      } catch (e) {}
+      saveAndRenderCart();
+    }
+
+    // ==========================================
+    // CHECKOUT MODAL FORM
+    // ==========================================
+    function openCheckoutModal() {
+      if (cart.length === 0) return;
+      toggleCartDrawer(false);
+
+      const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+      const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
+
+      document.getElementById('checkoutModalTotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+      document.getElementById('checkoutModalItemsCount').textContent = `${totalItems} Item`;
+
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkoutModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    async function handleCheckoutSubmit(event) {
+      event.preventDefault();
+
+      // Perangkap Bot Honeypot
+      if (document.getElementById('honeypotWebsite').value) {
+        return;
+      }
+
+      const name = document.getElementById('orderName').value.trim();
+      const phone = document.getElementById('orderPhone').value.trim();
+      const address = document.getElementById('orderAddress').value.trim();
+      const notes = document.getElementById('orderNotes').value.trim();
+
+      // Validasi Regex Nomor WhatsApp Indonesia
+      const phoneRegex = /^(\+62|62|0)8[1-9][0-9]{6,10}$/;
+      if (!phoneRegex.test(phone.replace(/\s+/g, ''))) {
+        document.getElementById('phoneError').classList.remove('hidden');
+        return;
+      }
+      document.getElementById('phoneError').classList.add('hidden');
+
+      const subtotal = cart.reduce((acc, item) => acc + (item.price * item.qty), 0);
+      const submitBtn = document.getElementById('submitOrderBtn');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Menghubungkan ke WhatsApp...`;
+
+      // Jika Google Apps Script URL telah dikonfigurasi, catat pesanan otomatis
+      if (GOOGLE_APPS_SCRIPT_URL) {
+        try {
+          fetch(GOOGLE_APPS_SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+              action: 'recordOrder',
+              data: {
+                name: name,
+                phone: phone,
+                address: address,
+                notes: notes,
+                total: subtotal,
+                items: cart
+              }
+            })
+          }).catch(err => console.warn("Pencatatan Sheets gagal:", err));
+        } catch(e) {}
+      }
+
+      // Format Pesanan WhatsApp
+      let itemsText = cart.map((i, idx) => `${idx + 1}. ${i.name} (${i.qty}x) = Rp ${(i.price * i.qty).toLocaleString('id-ID')}`).join('\n');
+      let waMessage = `*FORMAT PESANAN RESMI BPCAREU*\n` +
+                      `-----------------------------------------\n` +
+                      `*Nama Pemesan:* ${name}\n` +
+                      `*Nomor WhatsApp:* ${phone}\n` +
+                      `*Alamat Tujuan:* ${address}\n` +
+                      (notes ? `*Catatan Khusus:* ${notes}\n` : '') +
+                      `-----------------------------------------\n` +
+                      `*Daftar Produk Pesanan:*\n${itemsText}\n` +
+                      `-----------------------------------------\n` +
+                      `*Total Tagihan:* Rp ${subtotal.toLocaleString('id-ID')}\n\n` +
+                      `Mohon segera diproses dan informasikan ongkos kirim serta rekening resmi pembayaran. Terima kasih!`;
+
+      // Bersihkan keranjang
+      cart = [];
+      saveAndRenderCart();
+      closeCheckoutModal();
+
+      // Arahkan ke WhatsApp
+      window.open(`https://wa.me/${ADMIN_WA_NUMBER}?text=${encodeURIComponent(waMessage)}`, '_blank');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `<i class="fa-brands fa-whatsapp text-sm"></i> Kirim Pesanan ke WhatsApp`;
+    }
+
+    // ==========================================
+    // KALKULATOR DOSIS PROPOLIS
+    // ==========================================
+    function calculateDose() {
+      const weight = parseInt(document.getElementById('calcWeight').value) || 60;
+      const ageCategory = document.getElementById('calcAgeCategory').value;
+      const purpose = document.getElementById('calcPurpose').value;
+
+      let drops = Math.round(weight / 10);
+      drops = Math.max(2, Math.min(15, drops));
+
+      let frequency = "2 kali sehari (Pagi sebelum sarapan & Malam sebelum tidur)";
+      let suggestion = "British Propolis Regular (Merah)";
+
+      if (ageCategory === 'child') {
+        drops = Math.min(4, Math.max(2, Math.round(weight / 10)));
+        suggestion = "British Propolis Green Kids (Hijau). Dapat dicampur madu atau jus buah.";
+        if (purpose === 'recovery') frequency = "2-3 kali sehari saat kondisi batuk/pilek";
+      } else {
+        if (purpose === 'recovery') {
+          drops = Math.min(10, drops + 2);
+          frequency = "3 kali sehari selama masa pemulihan demam/batuk";
+        } else if (purpose === 'chronic') {
+          frequency = "3 kali sehari secara teratur 1 jam sebelum makan";
+        }
+      }
+
+      document.getElementById('calcDoseText').textContent = `${drops} Tetes per minum, dikonsumsi ${frequency}.`;
+      document.getElementById('calcProductSuggestion').innerHTML = `Rekomendasi Produk: <strong>${suggestion}</strong>. Larutkan dalam 1/3 gelas air hangat kuku. Aduk merata menggunakan sendok non-logam.`;
+      showToast("Kalkulasi dosis berhasil dihitung!");
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(index) {
+      const ans = document.getElementById(`faqAnswer-${index}`);
+      const icon = document.getElementById(`faqIcon-${index}`);
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        ans.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // ========================================================================
+    // MODUL OPERASI CRUD & ADMIN DASHBOARD
+    // ========================================================================
+    function openAdminPortal() {
+      loadAdminConfig();
+      if (isAdminAuthenticated) {
+        openAdminDashboard();
+      } else {
+        const modal = document.getElementById('adminLoginModal');
+        document.getElementById('loginErrorMsg').classList.add('hidden');
+        document.getElementById('adminApiKeyInput').value = '';
+        checkLockoutStatus();
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.remove('opacity-0'), 10);
+      }
+    }
+
+    function closeAdminLoginModal() {
+      const modal = document.getElementById('adminLoginModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    function handleAdminLogin(event) {
+      event.preventDefault();
+
+      // Cek apakah sedang dalam kondisi terkunci
+      if (checkLockoutStatus()) {
+        return;
+      }
+
+      const enteredKey = document.getElementById('adminApiKeyInput').value.trim();
+      const state = getSecurityState();
+
+      if (enteredKey === ADMIN_API_KEY) {
+        // Login Berhasil -> Reset catatan brute force
+        resetSecurityState();
+        isAdminAuthenticated = true;
+        closeAdminLoginModal();
+        showToast("Login Admin Berhasil!");
+        setTimeout(() => openAdminDashboard(), 250);
+      } else {
+        // Login Gagal -> Tambah counter percobaan salah
+        const failed = (state.failedAttempts || 0) + 1;
+        const errBox = document.getElementById('loginErrorMsg');
+        const errTitle = document.getElementById('loginErrorTitle');
+        const errDetail = document.getElementById('loginErrorDetail');
+
+        if (failed >= BRUTE_FORCE_CONFIG.maxAttempts) {
+          // Kunci akun selama lockoutDurationSeconds
+          const lockedUntil = Date.now() + (BRUTE_FORCE_CONFIG.lockoutDurationSeconds * 1000);
+          saveSecurityState({ failedAttempts: failed, lockedUntil: lockedUntil });
+          startLockoutCountdown(lockedUntil);
+          showToast("Akses dibekukan sementara karena 5x percobaan salah.");
+        } else {
+          saveSecurityState({ failedAttempts: failed, lockedUntil: 0 });
+          updateLoginAttemptsUI(failed, false);
+
+          const remaining = BRUTE_FORCE_CONFIG.maxAttempts - failed;
+          errTitle.textContent = "Password tidak sesuai!";
+          errDetail.textContent = `Percobaan gagal ${failed} dari ${BRUTE_FORCE_CONFIG.maxAttempts}. Anda memiliki ${remaining} kesempatan lagi sebelum akses dibekukan.`;
+          errBox.classList.remove('hidden');
+        }
+      }
+    }
+
+    function logoutAdmin() {
+      isAdminAuthenticated = false;
+      closeAdminDashboard();
+      showToast("Sesi Admin telah berakhir.");
+    }
+
+    function openAdminDashboard() {
+      renderAdminProductTable();
+      renderCredentialTable();
+      updateAdminConnectionBadge();
+      switchAdminTab('products');
+
+      const modal = document.getElementById('adminDashboardModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeAdminDashboard() {
+      const modal = document.getElementById('adminDashboardModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    function switchAdminTab(tabName) {
+      const tabProducts = document.getElementById('adminTabContentProducts');
+      const tabSecurity = document.getElementById('adminTabContentSecurity');
+      const tabConfig = document.getElementById('adminTabContentConfig');
+
+      const btnProducts = document.getElementById('tabBtnProducts');
+      const btnSecurity = document.getElementById('tabBtnSecurity');
+      const btnConfig = document.getElementById('tabBtnConfig');
+      const actions = document.getElementById('productTabActions');
+
+      tabProducts.classList.add('hidden');
+      tabSecurity.classList.add('hidden');
+      tabConfig.classList.add('hidden');
+
+      [btnProducts, btnSecurity, btnConfig].forEach(b => {
+        b.className = "px-4 py-2 rounded-xl text-xs font-black text-slate-600 hover:bg-slate-200 transition-colors flex items-center gap-2";
+      });
+
+      if (tabName === 'products') {
+        tabProducts.classList.remove('hidden');
+        actions.classList.remove('hidden');
+        btnProducts.className = "px-4 py-2 rounded-xl text-xs font-black bg-white border border-slate-200 text-slate-900 shadow-2xs flex items-center gap-2";
+      } else if (tabName === 'security') {
+        tabSecurity.classList.remove('hidden');
+        actions.classList.add('hidden');
+        btnSecurity.className = "px-4 py-2 rounded-xl text-xs font-black bg-white border border-slate-200 text-slate-900 shadow-2xs flex items-center gap-2";
+        renderCredentialTable();
+      } else if (tabName === 'config') {
+        tabConfig.classList.remove('hidden');
+        actions.classList.add('hidden');
+        btnConfig.className = "px-4 py-2 rounded-xl text-xs font-black bg-white border border-slate-200 text-slate-900 shadow-2xs flex items-center gap-2";
+
+        document.getElementById('configWebAppUrl').value = GOOGLE_APPS_SCRIPT_URL;
+        document.getElementById('configApiKey').value = ADMIN_API_KEY;
+      }
+    }
+
+    // ==========================================
+    // MANAJEMEN GANTI PASSWORD & TABEL KREDENSIAL
+    // ==========================================
+    function renderCredentialTable() {
+      const tbody = document.getElementById('credentialTableBody');
+      if (!tbody) return;
+
+      const maskedKey = showSecretCredential 
+        ? escapeHTML(ADMIN_API_KEY)
+        : '••••••••••••••••••••';
+
+      tbody.innerHTML = `
+        <tr class="hover:bg-slate-50/80 transition-colors">
+          <td class="py-3 px-3">
+            <span class="font-extrabold text-slate-900 flex items-center gap-1.5">
+              <i class="fa-solid fa-user-shield text-bpRed-700"></i> Super Admin
+            </span>
+            <span class="text-[10px] text-slate-400">Hak Akses Penuh (CRUD)</span>
+          </td>
+          <td class="py-3 px-3">
+            <span class="inline-flex items-center gap-1 text-[10px] font-black px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Aktif
+            </span>
+          </td>
+          <td class="py-3 px-3">
+            <div class="flex items-center gap-2 font-mono text-[11px] font-bold text-slate-800">
+              <span id="credentialKeyValue">${maskedKey}</span>
+              <button onclick="toggleSecretCredential()" class="text-slate-400 hover:text-bpRed-700 text-xs p-1" title="Tampilkan/Sembunyikan Kunci">
+                <i class="fa-solid ${showSecretCredential ? 'fa-eye-slash' : 'fa-eye'}"></i>
+              </button>
+            </div>
+          </td>
+          <td class="py-3 px-3 text-slate-500 font-medium text-[11px]">
+            ${escapeHTML(lastPasswordUpdate)}
+          </td>
+        </tr>
+      `;
+    }
+
+    function toggleSecretCredential() {
+      showSecretCredential = !showSecretCredential;
+      renderCredentialTable();
+    }
+
+    function handleChangePassword(event) {
+      event.preventDefault();
+      const currentPass = document.getElementById('currentAdminPass').value.trim();
+      const newPass = document.getElementById('newAdminPass').value.trim();
+      const confirmPass = document.getElementById('confirmNewAdminPass').value.trim();
+
+      const errEl = document.getElementById('changePassError');
+      const succEl = document.getElementById('changePassSuccess');
+      errEl.classList.add('hidden');
+      succEl.classList.add('hidden');
+
+      if (currentPass !== ADMIN_API_KEY) {
+        errEl.textContent = "Password saat ini salah! Periksa kembali password lama Anda.";
+        errEl.classList.remove('hidden');
+        return;
+      }
+
+      if (newPass.length < 6) {
+        errEl.textContent = "Password baru minimal 6 karakter.";
+        errEl.classList.remove('hidden');
+        return;
+      }
+
+      if (newPass !== confirmPass) {
+        errEl.textContent = "Konfirmasi password baru tidak cocok. Samakan isian kedua kolom.";
+        errEl.classList.remove('hidden');
+        return;
+      }
+
+      ADMIN_API_KEY = newPass;
+      const now = new Date();
+      lastPasswordUpdate = now.getFullYear() + "-" + 
+        String(now.getMonth() + 1).padStart(2, '0') + "-" + 
+        String(now.getDate()).padStart(2, '0') + " " + 
+        String(now.getHours()).padStart(2, '0') + ":" + 
+        String(now.getMinutes()).padStart(2, '0') + ":" + 
+        String(now.getSeconds()).padStart(2, '0');
+
+      try {
+        localStorage.setItem('bpcareu_admin_config', JSON.stringify({
+          url: GOOGLE_APPS_SCRIPT_URL,
+          key: ADMIN_API_KEY,
+          lastUpdated: lastPasswordUpdate
+        }));
+      } catch(e) {}
+
+      succEl.innerHTML = `<strong>Berhasil!</strong> Password admin telah diperbarui. Silakan gunakan password baru ini pada login berikutnya.`;
+      succEl.classList.remove('hidden');
+      document.getElementById('changePasswordForm').reset();
+
+      renderCredentialTable();
+      showToast("Password admin berhasil diubah!");
+    }
+
+    function renderAdminProductTable() {
+      const tbody = document.getElementById('adminProductTableBody');
+      const countEl = document.getElementById('adminProductCount');
+      if (!tbody) return;
+
+      countEl.textContent = runtimeProducts.length;
+
+      if (runtimeProducts.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="6" class="py-8 text-center text-slate-400">Belum ada produk di database. Klik "Tambah Produk Baru".</td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = runtimeProducts.map(p => {
+        const isArchived = p.status === 'archived';
+        return `
+          <tr class="hover:bg-slate-50 transition-colors ${isArchived ? 'opacity-60 bg-slate-50/50' : 'bg-white'}">
+            <td class="py-3 px-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden shrink-0 flex items-center justify-center p-1">
+                <img src="${p.image}" alt="${escapeHTML(p.name)}" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/100x100/991b1b/ffffff?text=BP';">
+              </div>
+              <div>
+                <p class="font-extrabold text-slate-900 text-xs">${escapeHTML(p.name)}</p>
+                <span class="font-mono text-[10px] text-slate-400">ID: ${escapeHTML(p.id)}</span>
+              </div>
+            </td>
+            <td class="py-3 px-4">
+              <span class="font-bold text-slate-800 uppercase text-[10px] bg-slate-100 px-2 py-0.5 rounded">${escapeHTML(p.category)}</span>
+              <p class="text-slate-500 text-[11px] mt-0.5">${escapeHTML(p.volume || '-')}</p>
+            </td>
+            <td class="py-3 px-4 font-mono text-[11px] text-slate-700 font-bold">${escapeHTML(p.bpom || '-')}</td>
+            <td class="py-3 px-4 text-right font-extrabold text-bpRed-800 text-xs">Rp ${Number(p.price || 0).toLocaleString('id-ID')}</td>
+            <td class="py-3 px-4 text-center">
+              <span class="inline-flex items-center gap-1 text-[10px] font-extrabold px-2 py-0.5 rounded-full ${isArchived ? 'bg-amber-100 text-amber-800' : 'bg-emerald-100 text-emerald-800'}">
+                <span class="w-1.5 h-1.5 rounded-full ${isArchived ? 'bg-amber-500' : 'bg-emerald-500'}"></span>
+                ${isArchived ? 'Archived' : 'Active'}
+              </span>
+            </td>
+            <td class="py-3 px-4 text-center">
+              <div class="flex items-center justify-center gap-1.5">
+                <button onclick="openProductForm('edit', '${p.id}')" class="p-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 text-blue-600 hover:text-blue-800 transition-colors" title="Edit Produk">
+                  <i class="fa-solid fa-pen-to-square text-xs"></i>
+                </button>
+                <button onclick="openDeleteConfirmModal('${p.id}')" class="p-1.5 rounded-lg border border-slate-200 hover:bg-red-50 text-red-600 hover:text-red-800 transition-colors" title="Arsipkan Produk">
+                  <i class="fa-solid fa-trash-can text-xs"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function openProductForm(mode, productId = null) {
+      const form = document.getElementById('productCrudForm');
+      const title = document.getElementById('productFormTitle');
+      const idInput = document.getElementById('formProdId');
+      form.reset();
+
+      document.getElementById('formMode').value = mode;
+
+      if (mode === 'create') {
+        title.textContent = "Tambah Produk Baru ke Katalog";
+        document.getElementById('formOriginalId').value = "";
+        idInput.disabled = false;
+        idInput.value = "bp-" + Date.now().toString().slice(-4);
+        document.getElementById('formProdCategory').value = "propolis";
+        document.getElementById('formProdStatus').value = "active";
+        document.getElementById('formProdPrice').value = 265000;
+        document.getElementById('formProdVolume').value = "6 ml";
+        document.getElementById('formProdBpom').value = "POM TR ";
+      } else {
+        const prod = runtimeProducts.find(p => p.id === productId);
+        if (!prod) return;
+
+        title.textContent = `Edit Produk: ${prod.name}`;
+        document.getElementById('formOriginalId').value = prod.id;
+        idInput.value = prod.id;
+        idInput.disabled = true;
+
+        document.getElementById('formProdCategory').value = prod.category || 'propolis';
+        document.getElementById('formProdName').value = prod.name || '';
+        document.getElementById('formProdPrice').value = prod.price || 0;
+        document.getElementById('formProdVolume').value = prod.volume || '';
+        document.getElementById('formProdBpom').value = prod.bpom || '';
+        document.getElementById('formProdBadge').value = prod.badge || '';
+        document.getElementById('formProdStatus').value = prod.status || 'active';
+        document.getElementById('formProdImage').value = prod.image || '';
+        document.getElementById('formProdShortDesc').value = prod.shortDesc || '';
+        document.getElementById('formProdDesc').value = prod.description || '';
+        document.getElementById('formProdUsage').value = prod.usage || '';
+      }
+
+      const modal = document.getElementById('productFormModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeProductFormModal() {
+      const modal = document.getElementById('productFormModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    }
+
+    async function handleProductFormSubmit(event) {
+      event.preventDefault();
+
+      const mode = document.getElementById('formMode').value;
+      const originalId = document.getElementById('formOriginalId').value;
+      const id = document.getElementById('formProdId').value.trim();
+      const saveBtn = document.getElementById('saveProductBtn');
+
+      const productPayload = {
+        id: id,
+        name: document.getElementById('formProdName').value.trim(),
+        category: document.getElementById('formProdCategory').value,
+        price: parseInt(document.getElementById('formProdPrice').value) || 0,
+        volume: document.getElementById('formProdVolume').value.trim(),
+        bpom: document.getElementById('formProdBpom').value.trim(),
+        badge: document.getElementById('formProdBadge').value.trim() || 'BP Group',
+        status: document.getElementById('formProdStatus').value,
+        image: document.getElementById('formProdImage').value.trim() || `https://placehold.co/400x400/991b1b/ffffff?text=${encodeURIComponent(id)}`,
+        shortDesc: document.getElementById('formProdShortDesc').value.trim(),
+        description: document.getElementById('formProdDesc').value.trim(),
+        usage: document.getElementById('formProdUsage').value.trim(),
+        benefits: [
+          'Memelihara daya tahan tubuh secara optimal',
+          'Kandungan bioflavonoid alami berkualitas tinggi',
+          'Sertifikasi resmi terdaftar di BPOM RI & Halal MUI'
+        ]
+      };
+
+      saveBtn.disabled = true;
+      saveBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Menyimpan...`;
+
+      try {
+        if (GOOGLE_APPS_SCRIPT_URL) {
+          const actionName = mode === 'create' ? 'createProduct' : 'updateProduct';
+          const res = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+              action: actionName,
+              apiKey: ADMIN_API_KEY,
+              id: originalId || id,
+              data: productPayload
+            })
+          });
+          const resJson = await res.json();
+          if (resJson.status !== 'success') {
+            throw new Error(resJson.message || "Gagal menyimpan ke Google Sheets");
+          }
+        }
+
+        if (mode === 'create') {
+          const existingIdx = runtimeProducts.findIndex(p => p.id === id);
+          if (existingIdx !== -1) {
+            runtimeProducts[existingIdx] = productPayload;
+          } else {
+            runtimeProducts.unshift(productPayload);
+          }
+          showToast("Produk berhasil ditambahkan!");
+        } else {
+          const idx = runtimeProducts.findIndex(p => p.id === originalId);
+          if (idx !== -1) {
+            runtimeProducts[idx] = { ...runtimeProducts[idx], ...productPayload };
+          }
+          showToast("Produk berhasil diperbarui!");
+        }
+
+        renderProductCatalog('all');
+        renderAdminProductTable();
+        closeProductFormModal();
+
+      } catch (err) {
+        showToast("Error: " + err.message);
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> Simpan ke Database`;
+      }
+    }
+
+    function openDeleteConfirmModal(productId) {
+      const prod = runtimeProducts.find(p => p.id === productId);
+      if (!prod) return;
+
+      pendingDeleteProductId = productId;
+      document.getElementById('deleteTargetName').textContent = `${prod.name} (${prod.id})`;
+
+      const modal = document.getElementById('deleteConfirmModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeDeleteConfirmModal() {
+      const modal = document.getElementById('deleteConfirmModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+      pendingDeleteProductId = null;
+    }
+
+    async function executeProductDeletion() {
+      if (!pendingDeleteProductId) return;
+      const delBtn = document.getElementById('confirmDeleteBtn');
+      delBtn.disabled = true;
+      delBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Memproses...`;
+
+      try {
+        if (GOOGLE_APPS_SCRIPT_URL) {
+          const res = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+              action: 'deleteProduct',
+              apiKey: ADMIN_API_KEY,
+              id: pendingDeleteProductId,
+              softDelete: true
+            })
+          });
+          const resJson = await res.json();
+          if (resJson.status !== 'success') {
+            throw new Error(resJson.message || "Gagal mengarsipkan di Google Sheets");
+          }
+        }
+
+        const target = runtimeProducts.find(p => p.id === pendingDeleteProductId);
+        if (target) {
+          target.status = 'archived';
+        }
+
+        renderProductCatalog('all');
+        renderAdminProductTable();
+        closeDeleteConfirmModal();
+        showToast("Produk berhasil diarsipkan!");
+
+      } catch (err) {
+        showToast("Gagal: " + err.message);
+      } finally {
+        delBtn.disabled = false;
+        delBtn.innerHTML = `Ya, Arsipkan`;
+      }
+    }
+
+    async function syncProductsFromSheets(showFeedback = false) {
+      if (!GOOGLE_APPS_SCRIPT_URL) {
+        if (showFeedback) showToast("URL Google Apps Script belum diisi di tab Konfigurasi.");
+        return;
+      }
+
+      const syncBtn = document.getElementById('refreshSyncBtn');
+      if (syncBtn) {
+        syncBtn.disabled = true;
+        syncBtn.innerHTML = `<i class="fa-solid fa-rotate fa-spin text-xs"></i> Menghubungkan...`;
+      }
+
+      try {
+        const response = await fetch(`${GOOGLE_APPS_SCRIPT_URL}?action=getProducts`);
+        const json = await response.json();
+
+        if (json.status === 'success' && Array.isArray(json.data) && json.data.length > 0) {
+          runtimeProducts = json.data.map(sheetItem => ({
+            id: sheetItem.id,
+            name: sheetItem.name,
+            category: sheetItem.category || 'propolis',
+            volume: sheetItem.volume || '6 ml',
+            price: Number(sheetItem.price) || 265000,
+            bpom: sheetItem.bpom || '-',
+            badge: sheetItem.tag || 'BP Group',
+            image: sheetItem.image || `https://placehold.co/400x400/991b1b/ffffff?text=${sheetItem.id}`,
+            shortDesc: sheetItem.shortDesc || '',
+            description: sheetItem.longDesc || sheetItem.shortDesc || '',
+            status: sheetItem.status || 'active',
+            benefits: [
+              'Formula ekstrak lebah murni berstandar internasional',
+              'Mempercepat pemulihan dan memperkuat metabolisme tubuh',
+              'Terdaftar resmi BPOM RI & Bersertifikat Halal'
+            ],
+            usage: sheetItem.usage || 'Teteskan ke air hangat sesuai kebutuhan dosis.'
+          }));
+
+          renderProductCatalog('all');
+          renderAdminProductTable();
+          updateAdminConnectionBadge(true);
+          if (showFeedback) showToast("Katalog berhasil disinkronkan dari Google Sheets!");
+        } else {
+          if (showFeedback) showToast("Sheets terhubung, namun data produk kosong.");
+        }
+      } catch (err) {
+        if (showFeedback) showToast("Gagal mengambil data dari Google Sheets: " + err.message);
+        updateAdminConnectionBadge(false);
+      } finally {
+        if (syncBtn) {
+          syncBtn.disabled = false;
+          syncBtn.innerHTML = `<i class="fa-solid fa-rotate text-xs"></i> <span>Sinkronkan Sheets</span>`;
+        }
+      }
+    }
+
+    async function testDatabaseConnection() {
+      const url = document.getElementById('configWebAppUrl').value.trim();
+      const resultBox = document.getElementById('connectionStatusResult');
+      resultBox.classList.remove('hidden', 'bg-emerald-50', 'border-emerald-200', 'text-emerald-950', 'bg-red-50', 'border-red-200', 'text-red-950');
+
+      if (!url) {
+        resultBox.className = "p-4 rounded-2xl border text-xs bg-red-50 border-red-200 text-red-950";
+        resultBox.innerHTML = `<strong>URL Kosong:</strong> Masukkan URL Web App Google Apps Script Anda terlebih dahulu.`;
+        return;
+      }
+
+      resultBox.className = "p-4 rounded-2xl border text-xs bg-slate-50 border-slate-200 text-slate-700";
+      resultBox.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-1.5"></i> Menghubungi Google Apps Script...`;
+
+      try {
+        const res = await fetch(`${url}?action=getProducts`);
+        const json = await res.json();
+
+        if (json.status === 'success') {
+          resultBox.className = "p-4 rounded-2xl border text-xs bg-emerald-50 border-emerald-200 text-emerald-950";
+          resultBox.innerHTML = `
+            <div class="flex items-center gap-2 font-bold mb-1">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i>
+              <span>Koneksi Google Apps Script Berhasil!</span>
+            </div>
+            <p>Terhubung ke Google Sheets. Ditemukan <strong>${json.data ? json.data.length : 0} produk</strong> di sheet Katalog_Produk.</p>
+          `;
+        } else {
+          throw new Error(json.message || "Respons tidak valid dari Apps Script.");
+        }
+      } catch (err) {
+        resultBox.className = "p-4 rounded-2xl border text-xs bg-red-50 border-red-200 text-red-950";
+        resultBox.innerHTML = `
+          <div class="flex items-center gap-2 font-bold mb-1">
+            <i class="fa-solid fa-triangle-exclamation text-red-600"></i>
+            <span>Gagal Terhubung ke Google Apps Script</span>
+          </div>
+          <p class="text-slate-600">${escapeHTML(err.message)}. Pastikan deployment Web App diset "Who has access: Anyone".</p>
+        `;
+      }
+    }
+
+    function saveDatabaseConfig(event) {
+      event.preventDefault();
+      GOOGLE_APPS_SCRIPT_URL = document.getElementById('configWebAppUrl').value.trim();
+      ADMIN_API_KEY = document.getElementById('configApiKey').value.trim() || ADMIN_API_KEY;
+
+      try {
+        localStorage.setItem('bpcareu_admin_config', JSON.stringify({
+          url: GOOGLE_APPS_SCRIPT_URL,
+          key: ADMIN_API_KEY,
+          lastUpdated: lastPasswordUpdate
+        }));
+      } catch(e) {}
+
+      showToast("Konfigurasi Database tersimpan!");
+      updateAdminConnectionBadge(!!GOOGLE_APPS_SCRIPT_URL);
+      if (GOOGLE_APPS_SCRIPT_URL) {
+        syncProductsFromSheets(true);
+      }
+    }
+
+    function loadAdminConfig() {
+      try {
+        const stored = localStorage.getItem('bpcareu_admin_config');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed.url) GOOGLE_APPS_SCRIPT_URL = parsed.url;
+          if (parsed.key) ADMIN_API_KEY = parsed.key;
+          if (parsed.lastUpdated) lastPasswordUpdate = parsed.lastUpdated;
+        }
+      } catch(e) {}
+    }
+
+    function updateAdminConnectionBadge(connected = null) {
+      const badge = document.getElementById('dbStatusBadge');
+      if (!badge) return;
+
+      if (!GOOGLE_APPS_SCRIPT_URL) {
+        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Mode Internal`;
+        badge.className = "text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-1";
+      } else if (connected) {
+        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Sheets Terhubung`;
+        badge.className = "text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800 flex items-center gap-1";
+      } else {
+        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Sheets Standby`;
+        badge.className = "text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-1";
+      }
+    }
+
+    // Inisialisasi awal saat seluruh DOM siap
+    window.addEventListener('DOMContentLoaded', () => {
+      loadAdminConfig();
+      renderPackagesTable();
+      renderProductCatalog('all');
+      initCart();
+      if (GOOGLE_APPS_SCRIPT_URL) {
+        syncProductsFromSheets(false);
+      }
+    });
+  </script>
+</body>
+</html>

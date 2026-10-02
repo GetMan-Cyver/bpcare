@@ -1,0 +1,79 @@
+---
+// PackagePricing.astro - Daftar Harga Paket Kemitraan BP Group
+import { PACKAGES } from '../data/packages';
+import { formatIDR } from '../utils/cart';
+
+const packages = PACKAGES;
+---
+<section id="paket-harga" class="py-16 sm:py-20 bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+      <span class="inline-block px-3.5 py-1 rounded-full bg-bpGold-400/20 text-amber-900 text-xs font-black uppercase tracking-wider border border-amber-300">
+        Daftar Harga Resmi BP Group
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+        Paket Belanja & Kemitraan Reseller
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-600">
+        Berlaku untuk seluruh produk BP Group: <strong>British Propolis (Reguler/Kids), Steffi, Brassic Eye, Brassic Pro, dan BP Norway</strong>. Makin banyak jumlah paket, modal makin hemat dan potensi keuntungan makin besar!
+      </p>
+    </div>
+
+    <!-- Tabel Paket Responsif Sesuai Referensi Gambar -->
+    <div class="max-w-5xl mx-auto border-2 border-bpRed-800 rounded-3xl overflow-hidden shadow-xl bg-white">
+      
+      <!-- Table Header Banner -->
+      <div class="bg-bpRed-800 text-white p-4 sm:p-5 text-center">
+        <h3 class="text-lg sm:text-xl font-black tracking-wider uppercase">Daftar Harga Paket Kemitraan BP Group</h3>
+        <p class="text-xs text-amber-200 font-semibold mt-1">British Propolis (Reg) • Steffi • Brassic Eye • Brassic Pro • Norway</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-red-50/80 text-bpRed-950 font-black border-b border-red-200 uppercase tracking-wider text-[11px] sm:text-xs">
+              <th class="py-3.5 px-4 sm:px-6">Nama Paket</th>
+              <th class="py-3.5 px-4 sm:px-6 text-center">Jumlah & Harga Satuan</th>
+              <th class="py-3.5 px-4 sm:px-6 text-right">Total Harga</th>
+              <th class="py-3.5 px-4 sm:px-6 text-center">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="packageTableBody" class="divide-y divide-slate-100 font-medium text-slate-800">
+            {packages.map((pkg) => (
+              <tr class="hover:bg-red-50/40 transition-colors">
+                <td class="py-4 px-4 sm:px-6">
+                  <div class="flex items-center gap-2">
+                    <span class="font-black text-slate-900 text-xs sm:text-sm uppercase tracking-wide">{pkg.name}</span>
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-bpGold-400/20 text-amber-900 border border-amber-300">{pkg.tag}</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500 mt-0.5">{pkg.desc}</p>
+                </td>
+                <td class="py-4 px-4 sm:px-6 text-center font-bold text-slate-700">
+                  {pkg.qty} PCS <span class="text-xs text-slate-400 font-normal">(@{formatIDR(pkg.unitPrice)})</span>
+                </td>
+                <td class="py-4 px-4 sm:px-6 text-right font-black text-bpRed-700 text-sm sm:text-base">
+                  {formatIDR(pkg.totalPrice)}
+                </td>
+                <td class="py-4 px-4 sm:px-6 text-center">
+                  <button data-package-id={pkg.id} class="package-buy-btn px-3.5 py-1.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-extrabold text-xs shadow-xs transition-all flex items-center justify-center gap-1.5 mx-auto cursor-pointer">
+                    <i class="fa-solid fa-cart-plus text-[10px]"></i>
+                    <span>Pilih Paket</span>
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+        <span class="flex items-center gap-1.5 font-bold text-slate-700">
+          <i class="fa-solid fa-circle-check text-emerald-600"></i> Bebas campur varian produk resmi BP Group
+        </span>
+        <span class="italic text-[11px] text-bpRed-800 font-bold">* Harga resmi terstandarisasi seluruh Indonesia</span>
+      </div>
+    </div>
+
+  </div>
+</section>

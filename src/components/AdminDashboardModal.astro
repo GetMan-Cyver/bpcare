@@ -1,0 +1,251 @@
+---
+// AdminDashboardModal.astro - Dashboard Admin Lengkap (CRUD, Keamanan, Konfigurasi Google Sheets)
+---
+<div id="adminDashboardModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 hidden opacity-0 transition-opacity duration-200">
+  <div class="bg-white rounded-3xl w-full max-w-6xl shadow-2xl overflow-hidden flex flex-col max-h-[95vh] border border-slate-200">
+    
+    <!-- Top Navigation Bar -->
+    <div class="p-4 sm:p-5 bg-slate-950 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-bpRed-700 flex items-center justify-center font-black text-amber-300 text-base">BP</div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h2 class="font-black text-base text-white">Dashboard Admin BPCareU</h2>
+            <span id="dbStatusBadge" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Mode Internal
+            </span>
+          </div>
+          <p class="text-xs text-slate-400">Manajemen Katalog Produk & Keamanan Portal Terpadu</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="refreshSyncBtn" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-bold transition-all flex items-center gap-1.5 border border-slate-700 cursor-pointer">
+          <i class="fa-solid fa-rotate text-xs"></i>
+          <span>Sinkronkan Sheets</span>
+        </button>
+        <button id="closeAdminDashboardBtn" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-red-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors cursor-pointer" title="Tutup Dashboard">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dashboard Tabs & Actions Header -->
+    <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 shrink-0">
+      <div class="flex flex-wrap items-center gap-2">
+        <button id="tabBtnProducts" class="px-4 py-2 rounded-xl text-xs font-black bg-white border border-slate-200 text-slate-900 shadow-2xs flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-boxes-stacked text-bpRed-700"></i> Katalog Produk (<span id="adminProductCount">0</span>)
+        </button>
+        <button id="tabBtnSecurity" class="px-4 py-2 rounded-xl text-xs font-black text-slate-600 hover:bg-slate-200 transition-colors flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-shield-halved text-bpRed-700"></i> Keamanan & Ganti Password
+        </button>
+        <button id="tabBtnConfig" class="px-4 py-2 rounded-xl text-xs font-black text-slate-600 hover:bg-slate-200 transition-colors flex items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-sliders text-slate-600"></i> Konfigurasi Google Sheets
+        </button>
+      </div>
+
+      <div id="productTabActions" class="flex items-center gap-2">
+        <button id="openNewProductFormBtn" class="px-4 py-2 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white text-xs font-bold shadow-xs transition-all flex items-center gap-1.5 cursor-pointer">
+          <i class="fa-solid fa-plus text-xs"></i> Tambah Produk Baru
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 1: PRODUCT LIST & CRUD TABLE -->
+    <div id="adminTabContentProducts" class="flex-1 overflow-y-auto p-4 sm:p-6">
+      <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-2xs bg-white">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-100/90 text-slate-700 font-black border-b border-slate-200 uppercase tracking-wider text-[11px]">
+                <th class="py-3 px-4">Produk</th>
+                <th class="py-3 px-4">Kategori & Volume</th>
+                <th class="py-3 px-4">Nomor BPOM</th>
+                <th class="py-3 px-4 text-right">Harga Resmi</th>
+                <th class="py-3 px-4 text-center">Status</th>
+                <th class="py-3 px-4 text-center">Aksi CRUD</th>
+              </tr>
+            </thead>
+            <tbody id="adminProductTableBody" class="divide-y divide-slate-100 font-medium">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: KEAMANAN & GANTI PASSWORD ADMIN -->
+    <div id="adminTabContentSecurity" class="flex-1 overflow-y-auto p-4 sm:p-6 hidden space-y-6">
+      <div class="max-w-4xl space-y-6 text-xs">
+        
+        <!-- Banner Informasi Status Keamanan -->
+        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-3 text-amber-950">
+          <div class="w-8 h-8 rounded-xl bg-amber-200 flex items-center justify-center text-amber-900 shrink-0">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <div class="space-y-1">
+            <h4 class="font-extrabold text-sm">Pembaruan Password Akses Admin</h4>
+            <p class="leading-relaxed text-amber-900">
+              Password admin berfungsi sebagai <strong>Secret API Key</strong> untuk mengamankan operasi CRUD produk dan integrasi Google Apps Script. Pastikan password baru mudah diingat oleh Anda atau tim pengelola toko.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- Form Ganti Password -->
+          <div class="lg:col-span-5 bg-white p-5 rounded-2xl border border-slate-200 space-y-4 shadow-2xs">
+            <div class="flex items-center gap-2 border-b border-slate-100 pb-3">
+              <i class="fa-solid fa-lock text-bpRed-700"></i>
+              <h4 class="font-black text-sm text-slate-900">Formulir Ubah Password</h4>
+            </div>
+
+            <form id="changePasswordForm" class="space-y-3.5">
+              <div class="space-y-1">
+                <label for="currentAdminPass" class="font-bold text-slate-700">Password Saat Ini <span class="text-red-500">*</span></label>
+                <div class="relative">
+                  <input type="password" id="currentAdminPass" required placeholder="Masukkan password aktif" class="w-full px-3 py-2 pr-9 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono" />
+                  <button type="button" id="curPassEyeBtn" class="absolute right-2.5 top-2 text-slate-400 hover:text-slate-700 cursor-pointer">
+                    <i id="curPassEye" class="fa-regular fa-eye text-xs"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <label for="newAdminPass" class="font-bold text-slate-700">Password Baru <span class="text-red-500">*</span></label>
+                <div class="relative">
+                  <input type="password" id="newAdminPass" required placeholder="Minimal 6 karakter" minlength="6" class="w-full px-3 py-2 pr-9 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono" />
+                  <button type="button" id="newPassEyeBtn" class="absolute right-2.5 top-2 text-slate-400 hover:text-slate-700 cursor-pointer">
+                    <i id="newPassEye" class="fa-regular fa-eye text-xs"></i>
+                  </button>
+                </div>
+                <p class="text-[10px] text-slate-400">Gunakan kombinasi huruf & angka untuk keamanan lebih baik.</p>
+              </div>
+
+              <div class="space-y-1">
+                <label for="confirmNewAdminPass" class="font-bold text-slate-700">Konfirmasi Password Baru <span class="text-red-500">*</span></label>
+                <div class="relative">
+                  <input type="password" id="confirmNewAdminPass" required placeholder="Ulangi password baru" minlength="6" class="w-full px-3 py-2 pr-9 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600 font-mono" />
+                  <button type="button" id="confirmPassEyeBtn" class="absolute right-2.5 top-2 text-slate-400 hover:text-slate-700 cursor-pointer">
+                    <i id="confirmPassEye" class="fa-regular fa-eye text-xs"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div id="changePassError" class="hidden p-2.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold"></div>
+              <div id="changePassSuccess" class="hidden p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold"></div>
+
+              <div class="pt-2">
+                <button type="submit" id="savePasswordBtn" class="w-full py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-extrabold shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+                  <i class="fa-solid fa-floppy-disk"></i> Simpan Password Baru
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Tabel Kredensial & Status Akses -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-table-list text-bpRed-700"></i>
+                  <h4 class="font-black text-sm text-slate-900">Tabel Informasi Kredensial Admin</h4>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                  Sesi Terautentikasi
+                </span>
+              </div>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr class="bg-slate-50 text-slate-600 font-black border-b border-slate-200 uppercase tracking-wider text-[10px]">
+                      <th class="py-2.5 px-3">Role / Peran</th>
+                      <th class="py-2.5 px-3">Status Kunci</th>
+                      <th class="py-2.5 px-3">Kunci Akses Aktif</th>
+                      <th class="py-2.5 px-3">Terakhir Diperbarui</th>
+                    </tr>
+                  </thead>
+                  <tbody id="credentialTableBody" class="divide-y divide-slate-100">
+                    <!-- Rendered dynamically -->
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Status Proteksi Anti-Brute Force -->
+              <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 space-y-2 text-[11px] text-slate-600">
+                <div class="flex items-center justify-between font-bold text-slate-800">
+                  <span class="flex items-center gap-1.5 text-emerald-700">
+                    <i class="fa-solid fa-shield-halved"></i> Proteksi Anti-Brute Force Aktif
+                  </span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px]">Aktif (Max 5x)</span>
+                </div>
+                <p class="leading-relaxed">
+                  Setiap percobaan login yang gagal dicatat dan dibatasi maksimal 5 kali berturut-turut. Jika terlampaui, IP/browser dibekukan selama 60 detik secara otomatis untuk menangkal serangan penebakan kata sandi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 3: GOOGLE APPS SCRIPT DATABASE CONFIG -->
+    <div id="adminTabContentConfig" class="flex-1 overflow-y-auto p-4 sm:p-6 hidden space-y-6">
+      <div class="max-w-3xl space-y-4 text-xs">
+        <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-4 text-blue-950 space-y-2">
+          <div class="flex items-center gap-2 font-bold text-sm">
+            <i class="fa-solid fa-circle-info text-blue-600"></i>
+            <span>Petunjuk Menghubungkan Google Sheets via Apps Script</span>
+          </div>
+          <p class="leading-relaxed text-slate-600">
+            Database backend menggunakan file <code>google_apps_script_backend.js</code>. Masukkan URL Web App hasil deploy Anda agar seluruh operasi CRUD tersimpan otomatis ke lembar spreadsheet Anda.
+          </p>
+        </div>
+
+        <form id="gasConfigForm" class="bg-white p-5 rounded-2xl border border-slate-200 space-y-4 shadow-2xs">
+          <div class="space-y-1.5">
+            <label for="configWebAppUrl" class="font-bold text-slate-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-link text-emerald-600"></i> Google Apps Script Web App URL:
+            </label>
+            <input type="url" id="configWebAppUrl" placeholder="https://script.google.com/macros/s/AKfycb.../exec" class="w-full font-mono px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600" />
+            <span class="text-[10px] text-slate-500">Pastikan URL berakhiran <code>/exec</code> saat deploy sebagai Web App.</span>
+          </div>
+
+          <div class="space-y-1.5">
+            <label for="configApiKey" class="font-bold text-slate-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-shield-halved text-amber-500"></i> Admin Secret API Key:
+            </label>
+            <input type="text" id="configApiKey" placeholder="PROPOLIS_SECRET_ADMIN_KEY_2026" class="w-full font-mono px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-bpRed-600" />
+            <span class="text-[10px] text-slate-500">Harus sama dengan konstanta <code>CONFIG.ADMIN_API_KEY</code> di Google Apps Script.</span>
+          </div>
+
+          <div class="pt-2 flex items-center gap-3">
+            <button type="submit" class="px-5 py-2.5 rounded-xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-bold shadow-md transition-all flex items-center gap-2 cursor-pointer">
+              <i class="fa-solid fa-floppy-disk"></i> Simpan Konfigurasi
+            </button>
+            <button type="button" id="testDbConnectionBtn" class="px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold transition-all flex items-center gap-2 cursor-pointer">
+              <i class="fa-solid fa-bolt text-amber-500"></i> Uji Koneksi Database
+            </button>
+          </div>
+        </form>
+
+        <div id="connectionStatusResult" class="hidden p-4 rounded-2xl border text-xs"></div>
+      </div>
+    </div>
+
+    <!-- Dashboard Footer -->
+    <div class="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 shrink-0">
+      <span class="flex items-center gap-2">
+        <i class="fa-solid fa-database text-slate-400"></i>
+        <span>Database Serverless Google Sheets • BPCareU Admin v2.1</span>
+      </span>
+      <button id="logoutAdminBtn" class="text-red-600 hover:text-red-700 font-bold flex items-center gap-1.5 cursor-pointer">
+        <i class="fa-solid fa-right-from-bracket"></i> Keluar Sesi Admin
+      </button>
+    </div>
+
+  </div>
+</div>

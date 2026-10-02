@@ -1,0 +1,21 @@
+---
+// DeleteConfirmModal.astro - Konfirmasi Pengarsipan Produk
+---
+<div id="deleteConfirmModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-xs z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+  <div class="bg-white rounded-3xl w-full max-w-sm shadow-2xl p-6 text-center space-y-4">
+    <div class="w-14 h-14 rounded-full bg-red-100 text-red-700 mx-auto flex items-center justify-center text-2xl">
+      <i class="fa-solid fa-trash-can"></i>
+    </div>
+    <div>
+      <h4 class="font-black text-base text-slate-900">Arsipkan Produk Ini?</h4>
+      <p id="deleteTargetName" class="text-xs text-slate-600 mt-1 font-semibold"></p>
+      <p class="text-[11px] text-slate-400 mt-1">Status produk akan diubah menjadi 'archived' dari katalog Google Sheets.</p>
+    </div>
+    <div class="flex items-center justify-center gap-2 pt-2">
+      <button type="button" id="cancelDeleteBtn" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 text-xs font-bold hover:bg-slate-100 cursor-pointer">Batal</button>
+      <button type="button" id="confirmDeleteBtn" class="px-5 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-md transition-all cursor-pointer">
+        Ya, Arsipkan
+      </button>
+    </div>
+  </div>
+</div>

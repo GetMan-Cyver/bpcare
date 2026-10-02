@@ -1,0 +1,104 @@
+---
+// Hero.astro - Hero Section
+---
+<section class="relative overflow-hidden bg-gradient-to-b from-red-50/40 via-white to-slate-50 pt-10 pb-16 sm:py-20 border-b border-slate-200/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+      <!-- Text Column -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bpRed-100/80 border border-bpRed-200 text-bpRed-900 text-xs font-bold">
+          <i class="fa-solid fa-crown text-bpGold-500"></i>
+          <span>Distributor Resmi Produk Kesehatan BP Group</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]">
+          Solusi Kesehatan Alami <br class="hidden sm:inline">
+          <span class="text-bpRed-700 underline decoration-bpGold-400 decoration-wavy decoration-2">Keluarga Indonesia</span> & Peluang Usaha
+        </h1>
+
+        <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+          Menyediakan produk original <strong>British Propolis (Reguler & Kids)</strong> dengan konsentrasi bioflavonoid 4x lebih pekat, <strong>Steffi Stevia</strong> pemanis 0 kalori, <strong>Brassic Eye</strong>, <strong>Brassic Pro</strong>, serta <strong>BP Norway Salmon Oil</strong>.
+        </p>
+
+        <!-- USP Cards Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left">
+          <div class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+            <div class="w-8 h-8 rounded-xl bg-red-100 text-bpRed-700 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-shield-virus text-sm"></i>
+            </div>
+            <span class="text-xs font-bold text-slate-800 leading-tight">4x Bioflavonoid Lebah UK</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+            <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-leaf text-sm"></i>
+            </div>
+            <span class="text-xs font-bold text-slate-800 leading-tight">Steffi Stevia 0 Kalori</span>
+          </div>
+          <div class="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs col-span-2 sm:col-span-1">
+            <div class="w-8 h-8 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-award text-sm"></i>
+            </div>
+            <span class="text-xs font-bold text-slate-800 leading-tight">BPOM RI & Halal MUI</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center gap-3.5 pt-3 justify-center lg:justify-start">
+          <a href="#katalog" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-bpRed-700 hover:bg-bpRed-800 text-white font-extrabold text-sm shadow-lg shadow-bpRed-800/25 transition-all text-center flex items-center justify-center gap-2">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Lihat Katalog Produk
+          </a>
+          <a href="#paket-harga" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-900 font-extrabold text-sm border border-slate-300 transition-all text-center flex items-center justify-center gap-2 shadow-2xs">
+            <i class="fa-solid fa-tags text-bpRed-700"></i>
+            Daftar Paket Kemitraan
+          </a>
+        </div>
+
+        <div class="pt-2 flex items-center justify-center lg:justify-start gap-4 text-xs text-slate-500 font-medium">
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-box text-emerald-600"></i> Ready Stock Fresh Batch</span>
+          <span>•</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-handshake text-emerald-600"></i> Bimbingan Penjualan Reseller</span>
+        </div>
+      </div>
+
+      <!-- Visual Hero Column -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-sm sm:max-w-md bg-gradient-to-b from-white to-red-50/40 p-6 rounded-3xl border border-red-100 shadow-2xl shadow-red-950/5">
+          <div class="absolute -top-4 -right-4 bg-slate-900 text-white px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2.5 z-20">
+            <i class="fa-solid fa-award text-amber-400 text-lg"></i>
+            <div>
+              <p class="text-[9px] font-medium text-slate-300 uppercase leading-none">Standar Inggris</p>
+              <p class="text-xs font-black">100% Produk Original</p>
+            </div>
+          </div>
+
+          <!-- Graphic Banner Lineup -->
+          <div class="py-6 flex flex-col items-center justify-center text-center">
+            <div class="w-full h-56 rounded-2xl bg-gradient-to-tr from-slate-100 via-amber-50 to-red-50 p-4 border border-slate-200/80 flex items-center justify-center overflow-hidden relative group">
+              <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-luvn2ibimi4426.webp" alt="British Propolis Produk" class="max-h-48 object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <p class="text-xs font-bold text-slate-800 mt-4">Jajaran Produk Lengkap BP Group</p>
+            <p class="text-[11px] text-slate-500">British Propolis • Steffi • Brassic Eye • Brassic Pro • Norway</p>
+          </div>
+
+          <div class="bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-2xs flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800 font-black text-sm">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-800">Konsultasi Dosis Gratis</p>
+                <p class="text-[11px] text-slate-500">Dampingan hingga terasa khasiatnya</p>
+              </div>
+            </div>
+            <a href="#kalkulator" class="text-xs font-extrabold text-bpRed-700 bg-red-50 px-2.5 py-1.5 rounded-xl hover:bg-red-100 transition-colors">
+              Hitung <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
